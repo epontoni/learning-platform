@@ -4,6 +4,7 @@ import * as React from 'react';
 import { useMDXContext } from './MDXContext';
 import { useProgress } from '@/hooks/useProgress';
 import { Check, X, Award, HelpCircle } from 'lucide-react';
+import { MathRenderer } from '@/components/MathRenderer';
 
 interface QuizMultipleChoiceProps {
   question: string;
@@ -62,8 +63,8 @@ export function QuizMultipleChoice({
     <div className="my-8 p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
       <div className="flex items-start space-x-3 mb-4">
         <HelpCircle className="h-6 w-6 text-primary-500 shrink-0 mt-0.5" />
-        <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100">
-          {question}
+        <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 flex-1">
+          <MathRenderer text={question} />
         </h3>
       </div>
 
@@ -101,7 +102,7 @@ export function QuizMultipleChoice({
               onClick={() => setSelectedIdx(idx)}
               className={`w-full text-left p-4 border rounded-xl flex items-center justify-between transition-all duration-200 font-medium ${optionStyle}`}
             >
-              <span>{option}</span>
+              <span><MathRenderer text={option} /></span>
               {icon}
             </button>
           );
@@ -129,7 +130,9 @@ export function QuizMultipleChoice({
                 <span>Incorrecto. Inténtalo de nuevo.</span>
               )}
             </p>
-            <p className="text-sm opacity-90">{explanation}</p>
+            <div className="text-sm opacity-90">
+              <MathRenderer text={explanation} />
+            </div>
           </div>
           {selectedIdx !== correctIndex && (
             <button
