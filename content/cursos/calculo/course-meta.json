@@ -1,0 +1,21 @@
+{
+  "id": "calculo",
+  "title": "Cálculo & Análisis Real",
+  "description": "Límites, continuidad, derivadas, integración de funciones de una y varias variables.",
+  "units": [
+    {
+      "id": "unidad-1",
+      "title": "Unidad 1: Límites y Continuidad",
+      "topics": [
+        {
+          "id": "01-limites",
+          "title": "1.1 Concepto de Límite y Definición Épsilon-Delta"
+        },
+        {
+          "id": "02-derivadas",
+          "title": "1.2 Definición Formal de la Derivada e Interpretación Geométrica"
+        }
+      ]
+    }
+  ]
+}

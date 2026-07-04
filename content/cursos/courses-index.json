@@ -1,0 +1,23 @@
+[
+  {
+    "id": "algebra",
+    "title": "Álgebra Lineal & Estructuras",
+    "description": "Conceptos de lógica proposicional, cuantificadores, espacios vectoriales y transformaciones lineales.",
+    "category": "Álgebra",
+    "difficulty": "Intermedio"
+  },
+  {
+    "id": "calculo",
+    "title": "Cálculo & Análisis Real",
+    "description": "Límites, continuidad, derivadas, integración de funciones de una y varias variables.",
+    "category": "Análisis",
+    "difficulty": "Avanzado"
+  },
+  {
+    "id": "numeros",
+    "title": "Teoría de Números y Criptografía",
+    "description": "Aritmética modular, divisibilidad, números primos y algoritmos de cifrado RSA.",
+    "category": "Matemática Discreta",
+    "difficulty": "Principiante"
+  }
+]

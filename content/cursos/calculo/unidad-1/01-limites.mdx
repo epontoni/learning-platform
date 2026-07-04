@@ -1,0 +1,55 @@
+# 1.1 Concepto de Límite y Definición Épsilon-Delta
+
+El cálculo infinitesimal nació de la necesidad de dar sentido al concepto de "aproximación". El pilar fundamental sobre el cual se construyen la derivada y la integral es el **límite matemático**.
+
+## La Definición Rigurosa (Weierstrass)
+
+De manera intuitiva, decimos que el límite de una función $f(x)$ cuando $x$ se aproxima a $c$ es $L$, denotado como $\lim_{x \to c} f(x) = L$, si podemos hacer que $f(x)$ esté tan cerca de $L$ como queramos simplemente tomando $x$ lo suficientemente cerca de $c$ (pero sin que $x$ sea exactamente $c$).
+
+Para formalizar esta idea, recurrimos a la famosa **definición $\epsilon$-$\delta$ (Épsilon-Delta)**:
+
+$$\lim_{x \to c} f(x) = L \iff \forall \epsilon > 0, \exists \delta > 0 \text{ tal que } 0 < |x - c| < \delta \implies |f(x) - L| < \epsilon$$
+
+### Desglose de los Términos:
+1. **$\epsilon$ (Épsilon):** Representa el margen de error tolerado en el eje vertical (el rango de salida de $f(x)$). Elegimos un entorno alrededor de $L$: $(L - \epsilon, L + \epsilon)$.
+2. **$\delta$ (Delta):** Es la distancia límite requerida en el eje horizontal (el dominio de $x$). Define un entorno alrededor de $c$: $(c - \delta, c + \delta)$.
+3. **$0 < |x - c|$:** Esta desigualdad estricta garantiza que **no nos interesa** lo que ocurre exactamente en $x = c$, solo nos importa el comportamiento infinitesimal alrededor de él.
+
+---
+
+## Animación Interactiva del Límite Épsilon-Delta
+
+Visualiza la construcción de los límites con esta animación geométrica y analítica detallada:
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/H2t-MptjYCE" 
+    title="Límite Formal Épsilon-Delta Explicado"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Cuestionario de Límites
+
+Verifica tu asimilación de la definición formal resolviendo la siguiente pregunta interactiva:
+
+<QuizMultipleChoice 
+  question="En la demostración de que lim (x -> 3) (2x - 1) = 5 usando Épsilon-Delta, ¿cuál es la relación óptima entre δ y ε?"
+  optionsString="Cualquier δ tal que δ <= ε / 2 es correcto.;Debemos seleccionar δ = 2ε.;El valor de δ es independiente de ε.;No existe un valor δ que satisfaga la condición para ε menores a 1."
+  correctIndex={0}
+  explanation="Queremos que |(2x - 1) - 5| < ε, lo cual equivale a |2x - 6| < ε, o bien 2|x - 3| < ε. Por lo tanto, |x - 3| < ε/2. Al definir δ = ε/2, garantizamos que si 0 < |x - 3| < δ, entonces |f(x) - L| < ε. Cualquier δ menor o igual a ε/2 también funciona."
+/>
+
+---
+
+## Evaluación de Rigor Lógico
+
+Analiza la función $f(x) = \frac{|x|}{x}$ en el dominio de los reales excluyendo el cero ($\mathbb{R} \setminus \{0\}$).
+
+<SemanticEval 
+  prompt="Demuestra detalladamente por qué el límite lim (x -> 0) f(x) no existe para la función f(x) = |x| / x. Estructura tu respuesta basándote en los límites laterales."
+/>

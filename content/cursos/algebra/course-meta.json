@@ -1,0 +1,27 @@
+{
+  "id": "algebra",
+  "title": "Álgebra Lineal & Estructuras",
+  "description": "Conceptos de lógica proposicional, cuantificadores, espacios vectoriales y transformaciones lineales.",
+  "units": [
+    {
+      "id": "unidad-1",
+      "title": "Unidad 1: Lógica Proposicional y Cuantificadores",
+      "topics": [
+        {
+          "id": "01-introduccion",
+          "title": "1.1 Introducción a las Proposiciones y Cuantificadores"
+        }
+      ]
+    },
+    {
+      "id": "unidad-2",
+      "title": "Unidad 2: Espacios Vectoriales",
+      "topics": [
+        {
+          "id": "01-espacios",
+          "title": "2.1 Estructura y Axiomas de Espacios Vectoriales"
+        }
+      ]
+    }
+  ]
+}

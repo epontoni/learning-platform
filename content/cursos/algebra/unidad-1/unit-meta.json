@@ -1,0 +1,12 @@
+{
+  "id": "unidad-1",
+  "title": "Lógica Proposicional y Cuantificadores",
+  "description": "Estudio formal del razonamiento deductivo, proposiciones lógicas, tablas de verdad y los cuantificadores universal y existencial.",
+  "topics": [
+    {
+      "id": "01-introduccion",
+      "title": "1.1 Introducción a las Proposiciones y Cuantificadores",
+      "duration": "15 min"
+    }
+  ]
+}

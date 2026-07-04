@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plataforma de Aprendizaje Matemático Riguroso
 
-## Getting Started
+Esta plataforma de aprendizaje interactivo de matemáticas está construida con Next.js (App Router), Tailwind CSS, KaTeX y el modelo de IA Gemini. Además, cuenta con un sistema flexible de carga de contenidos que permite servir los cursos desde el disco local o de manera remota desde un repositorio de GitHub.
 
-First, run the development server:
+---
+
+## Carga de Contenidos desde GitHub (Paso a Paso)
+
+El código de la aplicación ya está configurado con un resolvedor dinámico en `src/utils/content.ts`. Para habilitar la carga de cursos y lecciones desde tu repositorio de GitHub, sigue estos pasos:
+
+### Paso 1: Crear o Preparar el Repositorio de Contenidos
+Puedes usar el mismo repositorio del proyecto (`epontoni/learning-platform`) o uno exclusivo para contenidos. Asegúrate de que en la raíz del repositorio o de la rama seleccionada exista una carpeta llamada `content` con la estructura jerárquica esperada:
+
+```
+content/
+├── cursos/
+│   ├── courses-index.json
+│   ├── algebra/
+│   │   ├── course-meta.json
+│   │   ├── unidad-1/
+│   │   │   ├── unit-meta.json
+│   │   │   └── 01-introduccion.mdx
+│   │   └── unidad-2/
+│   │       ├── unit-meta.json
+│   │       └── 01-espacios.mdx
+│   ├── calculo/
+│   │   ├── course-meta.json
+│   │   └── unidad-1/
+│   │       ├── unit-meta.json
+│   │       ├── 01-limites.mdx
+│   │       └── 02-derivadas.mdx
+│   └── numeros/
+│       ├── course-meta.json
+│       └── unidad-1/
+│           ├── unit-meta.json
+│           └── 01-modular.mdx
+```
+
+### Paso 2: Configurar las Variables de Entorno
+Abre tu archivo local `.env.local` en la raíz del proyecto Next.js y define las siguientes variables:
+
+```env
+# 1. Cambia el origen de 'local' a 'github'
+CONTENT_SOURCE=github
+
+# 2. Especifica tu usuario/nombre-de-repositorio
+GITHUB_CONTENT_REPO=epontoni/learning-platform
+
+# 3. Especifica la rama (ej: main o master)
+GITHUB_CONTENT_BRANCH=main
+
+# 4. Agrega un Token de Acceso Personal (PAT) de GitHub (Opcional pero RECOMENDADO)
+# Para evitar límites de tasa (rate limits) de la API pública de GitHub.
+GITHUB_TOKEN=ghp_tuTokenDeAccesoPersonalDeGitHubAqui
+```
+
+> [!NOTE]
+> Para generar un token de GitHub, ve a **Settings** > **Developer Settings** > **Personal Access Tokens** > **Tokens (classic)** en tu cuenta de GitHub, presiona **Generate new token**, dale un nombre descriptivo y selecciona únicamente el permiso de lectura `repo` (si es un repositorio privado) o ningún permiso específico (si es público).
+
+### Paso 3: Iniciar o Reiniciar el Servidor de Desarrollo
+Si el servidor de Next.js ya está corriendo, presiona `Ctrl + C` en tu terminal y vuelve a ejecutar:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La plataforma ahora llamará directamente a la API de contenido raw de GitHub, descargando y cacheando las lecciones dinámicamente en cada petición.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Desarrollo Local
 
-## Learn More
+Si deseas volver a trabajar con archivos locales en tu disco duro, simplemente cambia la variable en tu `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+CONTENT_SOURCE=local
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El servidor detectará el cambio y reanudará la lectura física de la carpeta local `./content/`.

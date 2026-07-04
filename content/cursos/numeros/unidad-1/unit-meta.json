@@ -1,0 +1,12 @@
+{
+  "id": "unidad-1",
+  "title": "Aritmética Modular",
+  "description": "Exploración de la aritmética de los relojes, congruencias numéricas, restos y la fundamentación detrás de los sistemas criptográficos.",
+  "topics": [
+    {
+      "id": "01-modular",
+      "title": "1.1 Introducción a la Aritmética Modular y Relación de Congruencia",
+      "duration": "10 min"
+    }
+  ]
+}

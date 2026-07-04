@@ -1,0 +1,74 @@
+# 1.1 Introducción a las Proposiciones y Cuantificadores
+
+Bienvenidos al estudio de las matemáticas formales. Para construir demostraciones y teorías sólidas, primero necesitamos definir el lenguaje básico del razonamiento lógico: **las proposiciones** y los **cuantificadores**.
+
+## ¿Qué es una Proposición?
+
+Una **proposición** es una afirmación declarativa que es o bien **verdadera ($V$)** o bien **falsa ($F$)**, pero no ambas cosas a la vez.
+
+Por ejemplo:
+- *"El número $7$ es un número primo."* (Es una proposición verdadera).
+- *"$3 + 5 = 9$"* (Es una proposición falsa).
+- *"$x + 2 = 10$"* (No es una proposición, ya que su valor de verdad depende del valor de la variable $x$. A esto se le conoce como **función proposicional** o **enunciado abierto**).
+
+### Funciones Proposicionales y Cuantificadores
+
+Una función proposicional se denota generalmente como $P(x)$, donde $x$ pertenece a un dominio específico $U$ (llamado universo de discurso). Podemos convertir un enunciado abierto en una proposición usando cuantificadores:
+
+1. **Cuantificador Universal ($\forall$):** Indica que el enunciado es verdadero para *todos* los elementos del dominio.
+   $$\forall x \in U, P(x)$$
+2. **Cuantificador Existencial ($\exists$):** Indica que el enunciado es verdadero para *al menos un* elemento del dominio.
+   $$\exists x \in U, P(x)$$
+
+---
+
+## La Importancia del Orden de los Cuantificadores
+
+El orden en el que se escriben los cuantificadores altera de manera crítica el significado lógico de una proposición. Consideremos los números reales ($\mathbb{R}$) como nuestro universo de discurso:
+
+### Caso A: $\forall x \in \mathbb{R}, \exists y \in \mathbb{R} \text{ tal que } x + y = 0$
+*Traducción:* "Para cada número real $x$, existe un número real $y$ tal que su suma es $0$."
+Esta proposición es **verdadera** porque para cualquier $x$ que elijas, podemos seleccionar $y = -x$ (que también es un número real) y la ecuación se cumple.
+
+### Caso B: $\exists y \in \mathbb{R}, \forall x \in \mathbb{R} \text{ tal que } x + y = 0$
+*Traducción:* "Existe un número real $y$ tal que, para cualquier número real $x$, su suma es $0$."
+Esta proposición es **falsa**. No existe un único valor de $y$ que satisfaga la igualdad para absolutamente todos los reales $x$ simultáneamente. Si seleccionamos $y = 5$, entonces solo se cumple cuando $x = -5$, pero falla para cualquier otro valor de $x$.
+
+---
+
+## Video Explicativo: Introducción a la Lógica
+
+Para afianzar estos conceptos de manera visual, observa el siguiente video explicativo sobre la estructura del razonamiento lógico:
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/gH3H2W42Yl8" 
+    title="Lógica Matemática y Demostraciones"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Quiz de Validación Rápida
+
+Prueba tu comprensión inmediata de los cuantificadores respondiendo el siguiente cuestionario interactivo:
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes afirmaciones sobre los cuantificadores es verdadera en el conjunto de los números enteros Z?"
+  optionsString="La proposición '∃y ∈ Z, ∀x ∈ Z : x + y = x' es verdadera (y = 0 es el elemento neutro).;La proposición '∀x ∈ Z, ∃y ∈ Z : x < y' es falsa.;El orden de los cuantificadores nunca altera la validez lógica de una fórmula.;Un enunciado abierto P(x) siempre es una proposición formal sin importar si x está cuantificado."
+  correctIndex={0}
+  explanation="La opción 1 es correcta ya que si tomamos y = 0, se cumple que x + 0 = x para cualquier entero x. El orden de los cuantificadores sí altera el significado, y un enunciado abierto P(x) no es una proposición formal a menos que sus variables estén cuantificadas o asignadas."
+/>
+
+---
+
+## Desafío de Desarrollo: Demostración Formal
+
+Usa la caja de texto a continuación para justificar por qué la proposición $$\exists x \in \mathbb{R}, \forall y \in \mathbb{R} : x \cdot y = 1$$ es falsa. Intenta redactar una explicación matemática rigurosa. Tu respuesta será evaluada en tiempo real por el sistema de IA.
+
+<SemanticEval 
+  prompt="Demuestra formalmente por qué la proposición existencial-universal: ∃x ∈ R, ∀y ∈ R : x · y = 1 es falsa en el campo de los números reales."
+/>

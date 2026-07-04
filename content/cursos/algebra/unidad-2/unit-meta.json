@@ -1,0 +1,19 @@
+{
+  "id": "unidad-2",
+  "title": "Espacios Vectoriales",
+  "description": "Estudio formal de los espacios vectoriales, combinaciones lineales, bases, dimensión y subespacios vectoriales.",
+  "topics": [
+    {
+      "id": "01-espacios",
+      "title": "2.1 Estructura y Axiomas de Espacios Vectoriales",
+      "duration": "25 min",
+      "resources": [
+        {
+          "title": "Graficador de Combinaciones Lineales (GeoGebra)",
+          "type": "geogebra",
+          "url": "https://www.geogebra.org/material/iframe/id/vczpkmhp"
+        }
+      ]
+    }
+  ]
+}

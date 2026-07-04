@@ -1,26 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode Overrides (Matching Emanuel's portfolio + DigitalHouse) */
+  --bg-primary: #f4f6f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ebedf2;
+  
+  --text-primary: #121a17;
+  --text-secondary: #4a5c54;
+  --text-muted: #798e85;
+  
+  --accent: #5b4bff; /* DigitalHouse brand purple/indigo */
+  --accent-rgb: 91, 75, 255;
+  --accent-hover: #4535e0;
+  
+  --border: rgba(91, 75, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --shadow: rgba(0, 0, 0, 0.04);
+  --glow: rgba(91, 75, 255, 0.15);
+  
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --border-radius: 16px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  /* Dark Mode (Matching Emanuel's portfolio theme-sunset style) */
+  --bg-primary: #0a0f0d;
+  --bg-secondary: #111a16;
+  --bg-tertiary: #192720;
+  
+  --text-primary: #f2f7f5;
+  --text-secondary: #b2c5bd;
+  --text-muted: #6f857b;
+  
+  --accent: #8b5cf6;
+  --accent-rgb: 139, 92, 246;
+  --accent-hover: #7c3aed;
+  
+  --border: rgba(139, 92, 246, 0.15);
+  --glass-bg: rgba(17, 26, 22, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --glow: rgba(139, 92, 246, 0.25);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* LaTeX math container adjustments */
+.math-display {
+  overflow-x: auto;
+  padding: 1.25rem;
+  background: rgba(91, 75, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 1.75rem 0;
+}
+
+.dark .math-display {
+  background: rgba(139, 92, 246, 0.06);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

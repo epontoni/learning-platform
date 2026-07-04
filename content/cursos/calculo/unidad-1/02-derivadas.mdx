@@ -1,0 +1,60 @@
+# 1.2 Definición Formal de la Derivada e Interpretación Geométrica
+
+Habiendo formalizado el concepto de límite, ahora podemos adentrarnos en la herramienta más potente para medir el cambio y la variación: la **derivada**.
+
+## Definición de la Derivada como Límite
+
+Sea $f: (a, b) \to \mathbb{R}$ una función real y sea $x \in (a, b)$. Decimos que $f$ es **derivable** en $x$ si existe el límite del cociente de diferencias cuando el incremento $h$ tiende a cero. Este límite se define como la derivada $f'(x)$:
+
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+
+Si este límite existe, el valor resultante representa la **tasa de cambio instantánea** de $f$ en el punto $x$.
+
+---
+
+## Interpretación Geométrica: La Recta Tangente
+
+Geométricamente, la derivada es la **pendiente de la recta tangente** a la curva $y = f(x)$ en el punto $(x, f(x))$.
+
+1. **La Recta Secante:** Si tomamos dos puntos $(x, f(x))$ y $(x+h, f(x+h))$, la pendiente de la recta secante que pasa por ellos es:
+   $$m_{\text{sec}} = \frac{f(x+h) - f(x)}{h}$$
+2. **El Paso al Límite:** Conforme hacemos que $h$ tienda a cero, el segundo punto se desliza a lo largo de la curva hacia el primero. En el límite, la recta secante se convierte en la recta tangente, y su pendiente es exactamente $f'(x)$.
+
+---
+
+## Animación Interactiva de la Pendiente Tangente
+
+Visualiza la transición geométrica de rectas secantes a rectas tangentes a medida que $h \to 0$:
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/9vKqVkJX2T8" 
+    title="La esencia del cálculo y la derivada"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Cuestionario de Derivabilidad
+
+Valida tu comprensión teórica de la derivabilidad y la continuidad:
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes afirmaciones sobre la relación entre continuidad y derivabilidad es verdadera en un punto x = c?"
+  optionsString="Si f es derivable en c, entonces f debe ser continua en c.;Si f es continua en c, entonces siempre es derivable en c (ej. f(x) = |x| en x = 0).;La derivabilidad y la continuidad no tienen ninguna relación lógica.;Una función derivable en c puede tener una discontinuidad evitable en c."
+  correctIndex={0}
+  explanation="Teorema Fundamental: Toda función derivable en c es necesariamente continua en c. Sin embargo, el recíproco no es cierto (por ejemplo, f(x) = |x| es continua en 0 pero no derivable en 0 debido a un punto anguloso)."
+/>
+
+---
+
+## Desafío Práctico: Deducción Formal de la Derivada
+
+Deduce paso a paso la derivada de la función cuadrática $f(x) = x^2$ en un punto cualquiera $x$.
+
+<SemanticEval 
+  prompt="Utiliza la definición formal de límite del cociente de diferencias: lim (h -> 0) [f(x+h) - f(x)] / h para demostrar que la derivada de f(x) = x^2 es f'(x) = 2x. Muestra el desarrollo algebraico completo."
+/>

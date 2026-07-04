@@ -1,0 +1,63 @@
+# 1.1 Introducción a la Aritmética Modular y Relación de Congruencia
+
+La **aritmética modular** es un sistema aritmético para números enteros donde los números "dan la vuelta" al llegar a un cierto valor fijo, llamado **módulo**. Este concepto, formalizado por Carl Friedrich Gauss en 1801, es vital para áreas avanzadas como la teoría de grupos y la criptografía moderna.
+
+## Relación de Congruencia
+
+Sean $a, b \in \mathbb{Z}$ y $m \in \mathbb{Z}^+$ (un entero positivo llamado módulo). Decimos que $a$ es **congruente** con $b$ módulo $m$ si la diferencia $a - b$ es un múltiplo entero de $m$.
+
+Se denota formalmente como:
+
+$$a \equiv b \pmod m \iff m \mid (a - b)$$
+
+Esto es equivalente a decir que existe un entero $k \in \mathbb{Z}$ tal que:
+
+$$a - b = k \cdot m \implies a = b + k \cdot m$$
+
+### Propiedades Fundamentales:
+Si $a \equiv b \pmod m$ y $c \equiv d \pmod m$, entonces se cumplen las siguientes relaciones algebraicas:
+1. **Adición:** $a + c \equiv b + d \pmod m$
+2. **Multiplicación:** $a \cdot c \equiv b \cdot d \pmod m$
+3. **Potenciación:** $a^n \equiv b^n \pmod m$ para cualquier $n \in \mathbb{N}$
+
+*Nota Importante:* La división **no** siempre se comporta igual y requiere que el divisor sea coprimo con el módulo $m$ para poder multiplicar por su inverso modular.
+
+---
+
+## Explicación Visual de la Congruencia en Relojes
+
+Entiende la analogía del reloj y el cálculo de residuos con el siguiente video explicativo:
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/5hV9_3Z-aE0" 
+    title="Aritmética Modular y Congruencia Explicada"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Cuestionario de Aritmética Modular
+
+Pon a prueba tu intuición sobre congruencias con la siguiente pregunta interactiva:
+
+<QuizMultipleChoice 
+  question="¿A qué valor es equivalente -13 módulo 5 en el conjunto de residuos estándar {0, 1, 2, 3, 4}?"
+  optionsString="2;3;4;-3"
+  correctIndex={0}
+  explanation="Buscamos un entero r en {0,1,2,3,4} tal que -13 ≡ r (mod 5). Esto significa que -13 - r debe ser divisible por 5. Si elegimos r = 2, entonces -13 - 2 = -15, el cual es divisible por 5 (k = -3). Por tanto, -13 ≡ 2 (mod 5)."
+/>
+
+---
+
+## Evaluación de Congruencias Lógicas
+
+Considera la ecuación lineal de congruencia:
+$$3x \equiv 1 \pmod 7$$
+
+<SemanticEval 
+  prompt="Encuentra el valor del inverso modular de 3 módulo 7 (es decir, el entero x en {0,1,2,3,4,5,6} que satisface 3x ≡ 1 mod 7) y justifica por qué este inverso es único módulo 7 basándote en que 3 y 7 son coprimos."
+/>

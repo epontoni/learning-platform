@@ -1,0 +1,34 @@
+{
+  "id": "unidad-1",
+  "title": "Límites y Continuidad",
+  "description": "El fundamento del cálculo infinitesimal: definición rigurosa de límite matemático, métodos de resolución y continuidad real.",
+  "topics": [
+    {
+      "id": "01-limites",
+      "title": "1.1 Concepto de Límite y Definición Épsilon-Delta",
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Guía Práctica de Límites (PDF)",
+          "type": "pdf",
+          "url": "/resources/guia-limites.pdf"
+        },
+        {
+          "title": "Visualización Gráfica Épsilon-Delta (Imagen)",
+          "type": "image",
+          "url": "/resources/epsilon-delta-graph.png"
+        },
+        {
+          "title": "Podcast: La Intuición de los Límites (Audio)",
+          "type": "audio",
+          "url": "/resources/podcast-limites.mp3"
+        }
+      ]
+    },
+    {
+      "id": "02-derivadas",
+      "title": "1.2 Definición Formal de la Derivada e Interpretación Geométrica",
+      "duration": "25 min"
+    }
+  ]
+}

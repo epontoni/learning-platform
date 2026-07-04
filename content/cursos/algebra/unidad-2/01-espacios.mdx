@@ -1,0 +1,79 @@
+# 2.1 Estructura y Axiomas de Espacios Vectoriales
+
+En esta unidad, generalizaremos el concepto de vector más allá de las flechas geométricas bidimensionales o tridimensionales. Estudiaremos los **espacios vectoriales**, que proveen la estructura abstracta que subyace a gran parte de la física moderna, estadística y computación.
+
+## Definición de Espacio Vectorial
+
+Un **espacio vectorial** es un conjunto no vacío $V$ cuyos elementos llamamos *vectores*, sobre un cuerpo o campo $F$ (usualmente los números reales $\mathbb{R}$ o complejos $\mathbb{C}$ cuyos elementos llamamos *escalares*), equipado con dos operaciones binarias que satisfacen diez axiomas fundamentales:
+
+1. **Suma de vectores ($+$):** Toma dos vectores $\vec{u}, \vec{v} \in V$ y produce un vector suma $\vec{u} + \vec{v} \in V$.
+2. **Multiplicación por un escalar ($\cdot$):** Toma un escalar $\alpha \in F$ y un vector $\vec{v} \in V$, y produce un vector producto $\alpha \cdot \vec{v} \in V$.
+
+### Axiomas de la Suma:
+- **Asociatividad:** $\vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w}$ para todo $\vec{u}, \vec{v}, \vec{w} \in V$.
+- **Conmutatividad:** $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ para todo $\vec{u}, \vec{v} \in V$.
+- **Elemento Neutro:** Existe un vector nulo $\vec{0} \in V$ tal que $\vec{v} + \vec{0} = \vec{v}$ para todo $\vec{v} \in V$.
+- **Elemento Opuesto:** Para cada $\vec{v} \in V$, existe $-\vec{v} \in V$ tal que $\vec{v} + (-\vec{v}) = \vec{0}$.
+
+### Axiomas del Producto por Escalar:
+- **Compatibilidad/Asociatividad:** $\alpha \cdot (\beta \cdot \vec{v}) = (\alpha \cdot \beta) \cdot \vec{v}$ para todo $\alpha, \beta \in F$ y $\vec{v} \in V$.
+- **Elemento Neutro Multiplicativo:** $1 \cdot \vec{v} = \vec{v}$ (donde $1$ es la identidad en $F$).
+- **Distributividad respecto a la suma vectorial:** $\alpha \cdot (\vec{u} + \vec{v}) = \alpha \vec{u} + \alpha \vec{v}$ para todo $\alpha \in F$ y $\vec{u}, \vec{v} \in V$.
+- **Distributividad respecto a la suma de escalares:** $(\alpha + \beta) \cdot \vec{v} = \alpha \vec{v} + \beta \vec{v}$ para todo $\alpha, \beta \in F$ y $\vec{v} \in V$.
+
+---
+
+## Subespacios Vectoriales
+
+Un subconjunto no vacío $W \subseteq V$ es un **subespacio vectorial** de $V$ si y solo si $W$ es en sí mismo un espacio vectorial bajo las operaciones heredadas de $V$. Para verificar esto, basta con demostrar que $W$ es cerrado bajo ambas operaciones:
+
+$$\forall \vec{w}_1, \vec{w}_2 \in W, \vec{w}_1 + \vec{w}_2 \in W$$
+$$\forall \alpha \in F, \forall \vec{w} \in W, \alpha \cdot \vec{w} \in W$$
+
+---
+
+## Animación Interactiva de Espacios y Subespacios
+
+Explora geométricamente la idea de las dimensiones y las combinaciones lineales:
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/fNk_zzaMoEs" 
+    title="Combinaciones lineales, bases y dimensiones"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Visualizador de Espacios Vectoriales (GeoGebra)
+
+Interactúa directamente con la combinación lineal de vectores en tres dimensiones:
+
+<GeoGebra materialId="vczpkmhp" title="Espacio Vectorial 3D de GeoGebra" />
+
+---
+
+## Cuestionario de Axiomas Vectoriales
+
+Valida tu comprensión teórica de la cerradura algebraica respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Si definimos la suma en R^2 como usual, pero el producto por escalar como c * (x, y) = (c*x, 0). ¿Cuál de los siguientes axiomas falla para que sea un espacio vectorial?"
+  imageUrl="/resources/epsilon-delta-graph.png"
+  optionsString="El axioma del elemento neutro multiplicativo 1 * v = v falla.;La suma no es asociativa.;Falla la existencia del vector opuesto.;La multiplicación por escalar no es cerrada."
+  correctIndex={0}
+  explanation="Bajo esta definición, 1 * (x, y) = (1*x, 0) = (x, 0). Si y ≠ 0, entonces 1 * (x, y) ≠ (x, y). Por lo tanto, falla el axioma del elemento neutro multiplicativo: 1 * v = v."
+/>
+
+---
+
+## Desafío Conceptual: Unión de Subespacios
+
+Sean $U$ y $W$ dos subespacios vectoriales de un espacio vectorial $V$. 
+
+<SemanticEval 
+  prompt="Justifica formalmente por qué la unión de dos subespacios vectoriales U y W (es decir, U ∪ W) no es necesariamente un subespacio vectorial de V. Da un contraejemplo geométrico en R^2."
+/>

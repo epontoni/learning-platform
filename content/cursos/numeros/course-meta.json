@@ -1,0 +1,17 @@
+{
+  "id": "numeros",
+  "title": "Teoría de Números y Criptografía",
+  "description": "Aritmética modular, divisibilidad, números primos y algoritmos de cifrado RSA.",
+  "units": [
+    {
+      "id": "unidad-1",
+      "title": "Unidad 1: Aritmética Modular",
+      "topics": [
+        {
+          "id": "01-modular",
+          "title": "1.1 Introducción a la Aritmética Modular y Relación de Congruencia"
+        }
+      ]
+    }
+  ]
+}
