@@ -11,6 +11,8 @@ interface Course {
   description: string;
   category: string;
   difficulty: string;
+  active?: boolean;
+  entryPoint?: string;
 }
 
 interface CourseGridProps {
@@ -26,9 +28,10 @@ export function CourseGrid({ initialCourses }: CourseGridProps) {
 
   // Total topics mapping per course
   const totalTopicsMap: { [id: string]: number } = {
-    algebra: 1,
-    calculo: 3,
-    numeros: 2,
+    algebra: 2,
+    calculo: 2,
+    numeros: 1,
+    "geometria-diferencial": 7,
   };
 
   const categories = ['Todos', ...Array.from(new Set(initialCourses.map(c => c.category)))];
@@ -228,15 +231,9 @@ export function CourseGrid({ initialCourses }: CourseGridProps) {
                     </span>
                   </div>
 
-                  {course.id === 'algebra' || course.id === 'calculo' || course.id === 'numeros' ? (
+                  {course.active && course.entryPoint ? (
                     <Link
-                      href={
-                        course.id === 'algebra'
-                          ? '/cursos/algebra/unidad-1/01-introduccion'
-                          : course.id === 'calculo'
-                          ? '/cursos/calculo/unidad-1/01-limites'
-                          : '/cursos/numeros/unidad-1/01-modular'
-                      }
+                      href={course.entryPoint}
                       className="inline-flex items-center justify-center px-3 py-1.5 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold rounded-lg transition-all"
                     >
                       Ver contenido
