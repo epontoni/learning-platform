@@ -36,7 +36,7 @@ export default function RootLayout({
                   <Link href="#" className="hover:text-[var(--text-primary)] transition-colors">
                     Explorar
                   </Link>
-                  <Link href="#" className="hover:text-[var(--text-primary)] transition-colors">
+                  <Link href="/comunidad" className="hover:text-[var(--text-primary)] transition-colors">
                     Comunidad
                   </Link>
                 </nav>
