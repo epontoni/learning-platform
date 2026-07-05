@@ -1,8 +1,80 @@
 # Curvas Parametrizadas
 
+Denotaremos por $$\mathbb{R}^3$$ al conjunto de tripletes $(x,y,z)$ de números reales. Nuestro objetivo es caracterizar ciertos subconjuntos de $\mathbb{R}^3$ que llamaremos curvas, que son, en cierto sentido, uno-dimensionales y a los que puedan aplicarse los métodos del cálculo diferencial. Una manera natural de definir tales subconjuntos es a través de funciones diferecibles. Decimos que una función real de una variable real es *diferenciable* (o *suave*) si admite, en todos los puntos, derivadas de todos los órdenes (que son automáticamente continuas).
+
+
+## Definiciones
+
+- Una **curva parametrizada diferenciable** es una función diferenciable $$ \alpha: I \to \mathbb{R}^n$$ de un intervalo $I=(a,b)$ de la recta real $\mathbb{R}$ en $\mathbb{R}^n$.
+
+La palabra *diferenciable* en esta definición significa que $\alpha$ es una correspondencia que aplica cada $t\in I$ en un punto $\alpha(t)=(x(t),y(t),z(t)) \in \mathbb{R}^3$, de forma que cada una de sus funciones componentes ($x(t),y(t),z(t)$) es una función diferenciable.
+
+---
+
+## Cuestionario Conceptual
+
+Valida tus conocimientos fundamentales de la diferencia entre diferenciable y suave:
+
+<QuizMultipleChoice 
+  question="¿Cuál es la diferencia entre diferenciable y suave?"
+  options={[
+    "Son sinónimos (no existe diferencia).",
+    "Diferenciable implica suave.",
+    "Diferenciable significa que la función admite (al menos) una primera derivada, suave (smooth) implica que admite derivadas de todos los órdenes."
+  ]}
+  correctIndex={2}
+  explanation="La palabra diferenciable se refiere a la capacidad de la función de tener derivadas, mientras que suave implica que estas derivadas existen en todos los órdenes (es decir, es infinitamente derivable o de clase $C^\infty$). En el contexto de este curso, se utilizan como sinónimos, pero es importante conocer la distinción matemática."
+/>
+
+---
+
+- El **conjunto imagen** $$\alpha(I)\subset\mathbb{R}^3$$ se denomina **traza**  de $$\alpha$$: Es el conjunto de puntos del espacio ocupados por la curva (no confundir con la parametrización, que es una función).
+- Si denotamos por $$x'(t)$$ la primera derivada de $x$ en el punto $t$ y usamos notaciones similares para las funciones $z$ e $y$, el vector $$\alpha'(t) = \left(x'(t), y'(t), z'(t)\right)\in\mathbb{R}^3$$ se denomina **vector tangente** (o *vector velocidad*) de la curvatura $\alpha$ en $t$.
+- **Curva plana**: Es una curva contenida en un plano. **Nota**: mediante un cambio de coordenadas (movimiento rígido), cualquier curva plana puede representarse asumiendo que la coordenada $z = 0$.
+
+
+## Traza vs. Parametrización
+
+Intuitivamente, una curva es el camino que describe un punto en movimiento. Sin embargo, matemáticamente debemos diferenciar dos conceptos:
+1. **La traza (o imagen)**: Es el conjunto de puntos del espacio ocupados por la curva. Es un objeto puramente geométrico.
+2. **La parametrización**: Es la función que describe *cómo* se recorre esa traza a lo largo del tiempo.
+
+Por ejemplo, las funciones $\alpha(t) = (\cos t, \sin t)$ y $\beta(t) = (\cos 2t, \sin 2t)$ tienen la misma traza (la circunferencia unitaria), pero describen movimientos con velocidades distintas.
+
+$$\alpha(t) \neq \beta(t) \quad \text{aunque} \quad \alpha(I) = \beta(I)$$
+
+---
+
+## Cuestionario Conceptual
+
+Valida tus conocimientos fundamentales de la diferencia entre traza y parametrización:
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes afirmaciones describe de manera exacta la relación entre una curva diferencial y su traza?"
+  options={[
+    "Dos parametrizaciones totalmente distintas pueden dar lugar a la misma traza geométrica.",
+    "La traza define unívocamente a la parametrización de la curva.",
+    "Una curva diferenciable tiene infinitas trazas asociadas.",
+    "La traza es una función y la parametrización es un conjunto."
+  ]}
+  correctIndex={0}
+  explanation="Como se muestra en el ejemplo de la circunferencia unitaria, distintas parametrizaciones (como cambiar la velocidad del recorrido) dan lugar al mismo conjunto geométrico de puntos (traza)."
+/>
+
+---
+
+## Desafío de Análisis
+
+Demuestra formalmente tu comprensión completando la justificación del siguiente desafío teórico:
+
+<SemanticEval 
+  prompt="Explica la diferencia matemática entre una curva paramétrica diferenciable y su traza en $\mathbb{R}^2$. Da un contraejemplo de una parametrización cuya traza tenga una esquina o cúspide pero cuya función sea infinitamente diferenciable."
+/>
+
+---
 Una curva parametrizada diferenciable en el espacio euclidiano $\mathbb{R}^3$ es una aplicación diferenciable de clase $C^{\infty}$ de un intervalo abierto $I \subset \mathbb{R}$ en $\mathbb{R}^3$.
 
-$$\alpha: I \to \mathbb{R}^3$$
+<div align="center">$$\alpha: I \to \mathbb{R}^3$$</div>
 
 El vector derivado $\alpha'(t)$ en el punto $t \in I$ se denomina el **vector tangente** o vector velocidad de la curva en $t$.
 
@@ -26,7 +98,12 @@ Valida tu comprensión del vector velocidad:
 
 <QuizMultipleChoice 
   question="Si una curva paramétrica tiene la forma $\alpha(t) = (t^2, t^3, 0)$, ¿cuál es su vector tangente en $t = 1$?"
-  optionsString="$(2, 3, 0)$;$(1, 1, 0)$;$(2, 6, 0)$;$(0, 0, 0)$"
+  options={[
+    "$(2, 3, 0)$",
+    "$(1, 1, 0)$",
+    "$(2, 6, 0)$",
+    "$(0, 0, 0)$"
+  ]}
   correctIndex={0}
   explanation="Derivando cada componente de $\alpha(t)$ obtenemos $\alpha'(t) = (2t, 3t^2, 0)$. Evaluando en $t = 1$ resulta $\alpha'(1) = (2, 3, 0)$."
 />

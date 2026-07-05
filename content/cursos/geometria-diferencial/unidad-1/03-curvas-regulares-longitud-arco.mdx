@@ -22,7 +22,12 @@ $$\left\|\frac{d\alpha}{ds}\right\| = 1$$
 
 <QuizMultipleChoice 
   question="¿Por qué exigimos que $\alpha'(t) \neq \vec{0}$ en la definición de curva regular?"
-  optionsString="Para garantizar que el vector unitario tangente esté bien definido y evitar cúspides o singularidades en la traza.;Porque si la velocidad se anula, la curva deja de ser diferenciable.;Para que la longitud de arco sea siempre cero.;Para simplificar el cálculo de derivadas de orden superior."
+  options={[
+    "Para garantizar que el vector unitario tangente esté bien definido y evitar cúspides o singularidades en la traza.",
+    "Porque si la velocidad se anula, la curva deja de ser diferenciable.",
+    "Para que la longitud de arco sea siempre cero.",
+    "Para simplificar el cálculo de derivadas de orden superior."
+  ]}
   correctIndex={0}
   explanation="Si $\alpha'(t) = \vec{0}$, no podemos normalizar el vector tangente para obtener el vector unitario, y físicamente permite que la traza tenga esquinas puntiagudas (cúspides) a pesar de ser analíticamente diferenciable."
 />

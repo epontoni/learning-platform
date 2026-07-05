@@ -63,7 +63,12 @@ Valida tu comprensión teórica de la cerradura algebraica respondiendo la sigui
 <QuizMultipleChoice 
   question="Si definimos la suma en R^2 como usual, pero el producto por escalar como c * (x, y) = (c*x, 0). ¿Cuál de los siguientes axiomas falla para que sea un espacio vectorial?"
   imageUrl="/resources/epsilon-delta-graph.png"
-  optionsString="El axioma del elemento neutro multiplicativo 1 * v = v falla.;La suma no es asociativa.;Falla la existencia del vector opuesto.;La multiplicación por escalar no es cerrada."
+  options={[
+    "El axioma del elemento neutro multiplicativo 1 * v = v falla.",
+    "La suma no es asociativa.",
+    "Falla la existencia del vector opuesto.",
+    "La multiplicación por escalar no es cerrada."
+  ]}
   correctIndex={0}
   explanation="Bajo esta definición, 1 * (x, y) = (1*x, 0) = (x, 0). Si y ≠ 0, entonces 1 * (x, y) ≠ (x, y). Por lo tanto, falla el axioma del elemento neutro multiplicativo: 1 * v = v."
 />

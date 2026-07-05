@@ -46,7 +46,12 @@ Pon a prueba tu intuición sobre congruencias con la siguiente pregunta interact
 
 <QuizMultipleChoice 
   question="¿A qué valor es equivalente -13 módulo 5 en el conjunto de residuos estándar {0, 1, 2, 3, 4}?"
-  optionsString="2;3;4;-3"
+  options={[
+    "2",
+    "3",
+    "4",
+    "-3"
+  ]}
   correctIndex={0}
   explanation="Buscamos un entero r en {0,1,2,3,4} tal que -13 ≡ r (mod 5). Esto significa que -13 - r debe ser divisible por 5. Si elegimos r = 2, entonces -13 - 2 = -15, el cual es divisible por 5 (k = -3). Por tanto, -13 ≡ 2 (mod 5)."
 />

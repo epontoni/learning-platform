@@ -26,7 +26,12 @@ Sean $a, b, c \in S$, definimos las siguientes propiedades fundamentales:
 
 <QuizMultipleChoice 
   question="Si una operación binaria $*$ es conmutativa y asociativa, ¿cuál de las siguientes igualdades es correcta para cualquier terna $a, b, c$?"
-  optionsString="$a * (b * c) = c * (b * a)$;$a * b = c * a$;$(a * b) * c = a * (b * b)$;$a * (b * c) = a * c$"
+  options={[
+    "$a * (b * c) = c * (b * a)$",
+    "$a * b = c * a$",
+    "$(a * b) * c = a * (b * b)$",
+    "$a * (b * c) = a * c$"
+  ]}
   correctIndex={0}
   explanation="Por conmutatividad y asociatividad, podemos reordenar y reagrupar los elementos: a * (b * c) = a * (c * b) = (a * c) * b = (c * a) * b = c * (a * b) = c * (b * a)."
 />

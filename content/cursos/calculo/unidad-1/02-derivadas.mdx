@@ -44,7 +44,12 @@ Valida tu comprensión teórica de la derivabilidad y la continuidad:
 
 <QuizMultipleChoice 
   question="¿Cuál de las siguientes afirmaciones sobre la relación entre continuidad y derivabilidad es verdadera en un punto x = c?"
-  optionsString="Si f es derivable en c, entonces f debe ser continua en c.;Si f es continua en c, entonces siempre es derivable en c (ej. f(x) = |x| en x = 0).;La derivabilidad y la continuidad no tienen ninguna relación lógica.;Una función derivable en c puede tener una discontinuidad evitable en c."
+  options={[
+    "Si f es derivable en c, entonces f debe ser continua en c.",
+    "Si f es continua en c, entonces siempre es derivable en c (ej. f(x) = |x| en x = 0).",
+    "La derivabilidad y la continuidad no tienen ninguna relación lógica.",
+    "Una función derivable en c puede tener una discontinuidad evitable en c."
+  ]}
   correctIndex={0}
   explanation="Teorema Fundamental: Toda función derivable en c es necesariamente continua en c. Sin embargo, el recíproco no es cierto (por ejemplo, f(x) = |x| es continua en 0 pero no derivable en 0 debido a un punto anguloso)."
 />

@@ -58,7 +58,12 @@ Prueba tu comprensión inmediata de los cuantificadores respondiendo el siguient
 
 <QuizMultipleChoice 
   question="¿Cuál de las siguientes afirmaciones sobre los cuantificadores es verdadera en el conjunto de los números enteros Z?"
-  optionsString="La proposición '∃y ∈ Z, ∀x ∈ Z : x + y = x' es verdadera (y = 0 es el elemento neutro).;La proposición '∀x ∈ Z, ∃y ∈ Z : x < y' es falsa.;El orden de los cuantificadores nunca altera la validez lógica de una fórmula.;Un enunciado abierto P(x) siempre es una proposición formal sin importar si x está cuantificado."
+  options={[
+    "La proposición '∃y ∈ Z, ∀x ∈ Z : x + y = x' es verdadera (y = 0 es el elemento neutro).",
+    "La proposición '∀x ∈ Z, ∃y ∈ Z : x < y' es falsa.",
+    "El orden de los cuantificadores nunca altera la validez lógica de una fórmula.",
+    "Un enunciado abierto P(x) siempre es una proposición formal sin importar si x está cuantificado."
+  ]}
   correctIndex={0}
   explanation="La opción 1 es correcta ya que si tomamos y = 0, se cumple que x + 0 = x para cualquier entero x. El orden de los cuantificadores sí altera el significado, y un enunciado abierto P(x) no es una proposición formal a menos que sus variables estén cuantificadas o asignadas."
 />

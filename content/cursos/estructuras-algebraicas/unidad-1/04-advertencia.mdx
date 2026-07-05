@@ -24,7 +24,12 @@ Para que $e \in S$ sea el elemento neutro de la estructura, debe actuar como neu
 
 <QuizMultipleChoice 
   question="Si definimos la operación binaria en $\mathbb{R}$ como $a * b = a + 2b$, ¿cuál de las siguientes afirmaciones es correcta?"
-  optionsString="La operación no es asociativa ni conmutativa.;La operación es asociativa y conmutativa.;La operación posee un elemento neutro global.;La operación es conmutativa pero no asociativa."
+  options={[
+    "La operación no es asociativa ni conmutativa.",
+    "La operación es asociativa y conmutativa.",
+    "La operación posee un elemento neutro global.",
+    "La operación es conmutativa pero no asociativa."
+  ]}
   correctIndex={0}
   explanation="No es conmutativa porque a + 2b \neq b + 2a. No es asociativa porque (a * b) * c = (a + 2b) + 2c = a + 2b + 2c, mientras que a * (b * c) = a + 2(b + 2c) = a + 2b + 4c, los cuales difieren para c \neq 0."
 />

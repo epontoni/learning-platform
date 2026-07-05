@@ -39,7 +39,12 @@ Verifica tu asimilación de la definición formal resolviendo la siguiente pregu
 
 <QuizMultipleChoice 
   question="En la demostración de que lim (x -> 3) (2x - 1) = 5 usando Épsilon-Delta, ¿cuál es la relación óptima entre δ y ε?"
-  optionsString="Cualquier δ tal que δ <= ε / 2 es correcto.;Debemos seleccionar δ = 2ε.;El valor de δ es independiente de ε.;No existe un valor δ que satisfaga la condición para ε menores a 1."
+  options={[
+    "Cualquier δ tal que δ <= ε / 2 es correcto.",
+    "Debemos seleccionar δ = 2ε.",
+    "El valor de δ es independiente de ε.",
+    "No existe un valor δ que satisfaga la condición para ε menores a 1."
+  ]}
   correctIndex={0}
   explanation="Queremos que |(2x - 1) - 5| < ε, lo cual equivale a |2x - 6| < ε, o bien 2|x - 3| < ε. Por lo tanto, |x - 3| < ε/2. Al definir δ = ε/2, garantizamos que si 0 < |x - 3| < δ, entonces |f(x) - L| < ε. Cualquier δ menor o igual a ε/2 también funciona."
 />

@@ -60,7 +60,19 @@ export function MathRenderer({ text }: MathRendererProps) {
                   return <code key={subIndex} className="text-rose-500 font-mono text-xs">{subPart}</code>;
                 }
               }
-              return subPart;
+              
+              // Apply basic markdown formatting to non-math text
+              let formattedText = subPart
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/`(.*?)`/g, '<code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded font-mono text-sm text-primary-600 dark:text-primary-400">$1</code>');
+                
+              return (
+                <span
+                  key={subIndex}
+                  dangerouslySetInnerHTML={{ __html: formattedText }}
+                />
+              );
             })}
           </span>
         );

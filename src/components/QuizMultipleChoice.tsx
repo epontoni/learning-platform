@@ -9,8 +9,7 @@ import { playCorrectSound, playWrongSound } from '@/utils/celebration';
 
 interface QuizMultipleChoiceProps {
   question: string;
-  options?: string[];
-  optionsString?: string;
+  options: string[];
   correctIndex: number;
   explanation: string;
   imageUrl?: string;
@@ -19,13 +18,14 @@ interface QuizMultipleChoiceProps {
 export function QuizMultipleChoice({
   question = '',
   options = [],
-  optionsString = '',
   correctIndex = 0,
   explanation = '',
   imageUrl = '',
 }: QuizMultipleChoiceProps) {
-  const opts = optionsString ? optionsString.split(';') : options;
-  
+  // Validamos que el correctIndex esté dentro del rango del arreglo
+  if (correctIndex < 0 || correctIndex >= options.length) {
+    console.error(`QuizMultipleChoice: correctIndex ${correctIndex} está fuera de los límites para options de longitud ${options.length}`);
+  }
   const { courseId, unitId, topicId } = useMDXContext();
   const { getTopicProgress, updateQuizScore, markCompleted } = useProgress();
   
@@ -79,7 +79,7 @@ export function QuizMultipleChoice({
       )}
 
       <div className="space-y-3 mb-5">
-        {opts.map((option, idx) => {
+        {options.map((option, idx) => {
           let optionStyle = 'border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800';
           let icon = null;
 
