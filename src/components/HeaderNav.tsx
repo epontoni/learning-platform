@@ -12,12 +12,20 @@ export function HeaderNav() {
   const isExplorarActive = pathname === '/explorar';
   const isComunidadActive = pathname === '/comunidad';
 
+  const isInicioActive = pathname === '/';
+
   const baseClass = "pb-5 pt-5 transition-colors font-semibold text-sm";
   const activeClass = "text-[var(--accent)] border-b-2 border-[var(--accent)]";
   const inactiveClass = "text-[var(--text-secondary)] hover:text-[var(--text-primary)]";
 
   return (
     <nav className="hidden md:flex items-center space-x-8">
+      <Link
+        href="/"
+        className={`${baseClass} ${isInicioActive ? activeClass : inactiveClass}`}
+      >
+        Inicio
+      </Link>
       <Link
         href="/mis-cursos"
         className={`${baseClass} ${isMisCursosActive ? activeClass : inactiveClass}`}
