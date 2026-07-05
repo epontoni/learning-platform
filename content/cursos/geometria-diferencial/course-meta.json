@@ -1,0 +1,41 @@
+{
+  "id": "geometria-diferencial",
+  "title": "Geometría Diferencial",
+  "description": "Geometría diferencial de curvas y superficies.",
+  "units": [
+    {
+      "id": "unidad-1",
+      "title": "Unidad 1: Curvas",
+      "topics": [
+        {
+          "id": "01-introduccion",
+          "title": "1.1 Introducción"
+        },
+        {
+          "id": "02-curvas-parametrizadas",
+          "title": "1.2 Curvas parametrizadas"
+        },
+        {
+          "id": "03-curvas-regulares-longitud-arco",
+          "title": "1.3 Curvas regulares; Longitud de arco"
+        },
+        {
+          "id": "04-producto-vectorial",
+          "title": "1.4 El producto vectorial en R^3"
+        },
+        {
+          "id": "05-teoria-local-curvas",
+          "title": "1.5 Teoría local de curvas parametrizadas por longitud de arco"
+        },
+        {
+          "id": "06-forma-canonica-local",
+          "title": "1.6 La forma canónica local"
+        },
+        {
+          "id": "07-propiedades-globales-curvas-planas",
+          "title": "1.7 Propiedades globales de curvas planas"
+        }
+      ]
+    }
+  ]
+}
