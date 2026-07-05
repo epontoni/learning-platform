@@ -19,7 +19,7 @@ export default async function MisCursosPage() {
   const activeCourses = courses.filter((c: any) => c.active);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10 space-y-8 animate-in fade-in duration-200">
+    <div className="w-full px-6 py-10 space-y-8 animate-in fade-in duration-200">
       <div className="space-y-2">
         <div className="inline-flex items-center space-x-2 text-[var(--accent)] bg-[var(--border)] px-3 py-1 rounded-full text-xs font-semibold">
           <GraduationCap className="h-3.5 w-3.5" />
