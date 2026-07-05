@@ -95,9 +95,9 @@ export function SemanticEval({ prompt }: SemanticEvalProps) {
           <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100">
             Evaluación Conceptual de IA
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            {prompt}
-          </p>
+          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+            <MathRenderer text={prompt} />
+          </div>
         </div>
       </div>
 
