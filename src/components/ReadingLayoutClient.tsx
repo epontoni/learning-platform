@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useProgress } from '@/hooks/useProgress';
+import { celebrateCourseCompletion } from '@/utils/celebration';
 import { AITutorPanel } from './AITutorPanel';
 import {
   Menu,
@@ -109,7 +110,18 @@ export function ReadingLayoutClient({
   const nextTopic = currentIdx < flatTopics.length - 1 ? flatTopics[currentIdx + 1] : null;
 
   const handleToggleComplete = () => {
-    markCompleted(course.id, currentUnitId, currentTopicId, !isActiveTopicDone);
+    const nowCompleting = !isActiveTopicDone;
+    markCompleted(course.id, currentUnitId, currentTopicId, nowCompleting);
+
+    // Check if this was the last topic to complete, triggering a full-course celebration
+    if (nowCompleting) {
+      const completedAfter = Object.keys(progress).filter(
+        key => key.startsWith(`${course.id}/`) && progress[key].isCompleted
+      ).length + 1;
+      if (completedAfter >= totalTopicsCount) {
+        setTimeout(() => celebrateCourseCompletion(), 300);
+      }
+    }
   };
 
   // Icon selector based on topic properties
