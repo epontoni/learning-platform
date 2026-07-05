@@ -33,7 +33,7 @@ export default async function MisCursosPage() {
         </p>
       </div>
 
-      <CourseGrid initialCourses={activeCourses} initialTab="en-curso" hideFilters={true} />
+      <CourseGrid initialCourses={activeCourses} initialTab="todos" showTabs={true} showFilters={false} />
     </div>
   );
 }

@@ -18,10 +18,16 @@ interface Course {
 interface CourseGridProps {
   initialCourses: Course[];
   initialTab?: 'todos' | 'en-curso' | 'finalizados';
-  hideFilters?: boolean;
+  showTabs?: boolean;
+  showFilters?: boolean;
 }
 
-export function CourseGrid({ initialCourses, initialTab = 'todos', hideFilters = false }: CourseGridProps) {
+export function CourseGrid({
+  initialCourses,
+  initialTab = 'todos',
+  showTabs = true,
+  showFilters = true
+}: CourseGridProps) {
   const { isLoaded, progress } = useProgress();
   const [search, setSearch] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('Todos');
@@ -52,6 +58,9 @@ export function CourseGrid({ initialCourses, initialTab = 'todos', hideFilters =
   const filteredCourses = initialCourses.filter(course => {
     const { percent } = getCourseProgressStats(course.id);
     
+    // In "My Courses" view (showTabs=true, showFilters=false), 'todos' tab should only show started courses
+    if (showTabs && !showFilters && activeTab === 'todos' && percent === 0) return false;
+
     // Tab filter
     if (activeTab === 'en-curso' && (percent === 0 || percent === 100)) return false;
     if (activeTab === 'finalizados' && percent < 100) return false;
@@ -67,7 +76,7 @@ export function CourseGrid({ initialCourses, initialTab = 'todos', hideFilters =
   return (
     <div className="space-y-8">
       {/* Tabs like DigitalHouse (En curso, Finalizados, Todos) */}
-      {!hideFilters && (
+      {showTabs && (
         <div className="flex space-x-2 border-b border-[var(--glass-border)] pb-1">
           <button
             onClick={() => setActiveTab('todos')}
@@ -103,70 +112,85 @@ export function CourseGrid({ initialCourses, initialTab = 'todos', hideFilters =
       )}
 
       {/* Search and Filters panel */}
-      {!hideFilters ? (
+      {showFilters && (
         <div className="bg-[var(--bg-secondary)] border border-[var(--glass-border)] p-5 rounded-2xl flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm">
-        <div className="relative w-full md:max-w-md">
-          <Search className="absolute left-3 top-3 h-4 w-4 text-[var(--text-muted)]" />
-          <input
-            type="text"
-            placeholder="Buscar por tema o materia..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2.5 border border-[var(--glass-border)] bg-[var(--bg-primary)] rounded-xl text-sm text-[var(--text-primary)] outline-none focus:ring-1 focus:ring-[var(--accent)] transition-all font-medium"
-          />
-        </div>
-
-        <div className="flex flex-wrap gap-4 w-full md:w-auto">
-          {/* Category Filter */}
-          <div className="flex items-center space-x-2">
-            <span className="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
-              <Filter className="h-3 w-3" /> Categoría:
-            </span>
-            <div className="flex gap-1">
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-2.5 py-1 text-xs font-semibold rounded-lg transition-all ${
-                    selectedCategory === cat
-                      ? 'bg-[var(--accent)] text-white'
-                      : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+          <div className="relative w-full md:max-w-md">
+            <Search className="absolute left-3 top-3 h-4 w-4 text-[var(--text-muted)]" />
+            <input
+              type="text"
+              placeholder="Buscar por tema o materia..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-9 pr-4 py-2.5 border border-[var(--glass-border)] bg-[var(--bg-primary)] rounded-xl text-sm text-[var(--text-primary)] outline-none focus:ring-1 focus:ring-[var(--accent)] transition-all font-medium"
+            />
           </div>
 
-          {/* Difficulty Filter */}
-          <div className="flex items-center space-x-2">
-            <span className="text-xs font-semibold text-[var(--text-muted)]">Dificultad:</span>
-            <div className="flex gap-1">
-              {difficulties.map(diff => (
-                <button
-                  key={diff}
-                  onClick={() => setSelectedDifficulty(diff)}
-                  className={`px-2.5 py-1 text-xs font-semibold rounded-lg transition-all ${
-                    selectedDifficulty === diff
-                      ? 'bg-[var(--accent)] text-white'
-                      : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]'
-                  }`}
-                >
-                  {diff}
-                </button>
-              ))}
+          <div className="flex flex-wrap gap-4 w-full md:w-auto">
+            {/* Category Filter */}
+            <div className="flex items-center space-x-2">
+              <span className="text-xs font-semibold text-[var(--text-muted)] flex items-center gap-1">
+                <Filter className="h-3 w-3" /> Categoría:
+              </span>
+              <div className="flex gap-1">
+                {categories.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-2.5 py-1 text-xs font-semibold rounded-lg transition-all ${
+                      selectedCategory === cat
+                        ? 'bg-[var(--accent)] text-white'
+                        : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Difficulty Filter */}
+            <div className="flex items-center space-x-2">
+              <span className="text-xs font-semibold text-[var(--text-muted)]">Dificultad:</span>
+              <div className="flex gap-1">
+                {difficulties.map(diff => (
+                  <button
+                    key={diff}
+                    onClick={() => setSelectedDifficulty(diff)}
+                    className={`px-2.5 py-1 text-xs font-semibold rounded-lg transition-all ${
+                      selectedDifficulty === diff
+                        ? 'bg-[var(--accent)] text-white'
+                        : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]'
+                    }`}
+                  >
+                    {diff}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      ) : null}
+      )}
 
       {/* Courses Grid */}
       {filteredCourses.length === 0 ? (
-        <div className="text-center py-12 border border-dashed border-[var(--glass-border)] rounded-2xl bg-[var(--bg-secondary)]/50">
-          <p className="text-sm text-[var(--text-muted)]">No se encontraron cursos con los criterios seleccionados.</p>
-        </div>
+        showTabs && !showFilters ? (
+          <div className="text-center py-16 border border-dashed border-[var(--glass-border)] rounded-2xl bg-[var(--bg-secondary)]/30 space-y-4 max-w-md mx-auto">
+            <p className="text-sm text-[var(--text-secondary)] font-medium">Aún no tienes certificaciones cursando en esta categoría.</p>
+            <p className="text-xs text-[var(--text-muted)]">Los cursos que comiences a estudiar aparecerán organizados aquí.</p>
+            <div className="pt-2">
+              <Link
+                href="/explorar"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-[var(--accent)]/10"
+              >
+                Explorar Catálogo de Cursos
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="text-center py-12 border border-dashed border-[var(--glass-border)] rounded-2xl bg-[var(--bg-secondary)]/50">
+            <p className="text-sm text-[var(--text-muted)]">No se encontraron cursos con los criterios seleccionados.</p>
+          </div>
+        )
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCourses.map(course => {

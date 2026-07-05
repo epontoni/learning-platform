@@ -30,7 +30,7 @@ export default async function ExplorarPage() {
         </p>
       </div>
 
-      <CourseGrid initialCourses={courses} initialTab="todos" hideFilters={false} />
+      <CourseGrid initialCourses={courses} initialTab="todos" showTabs={false} showFilters={true} />
     </div>
   );
 }
