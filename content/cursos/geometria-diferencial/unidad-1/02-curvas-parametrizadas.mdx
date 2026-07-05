@@ -1,0 +1,40 @@
+# Curvas Parametrizadas
+
+Una curva parametrizada diferenciable en el espacio euclidiano $\mathbb{R}^3$ es una aplicación diferenciable de clase $C^{\infty}$ de un intervalo abierto $I \subset \mathbb{R}$ en $\mathbb{R}^3$.
+
+$$\alpha: I \to \mathbb{R}^3$$
+
+El vector derivado $\alpha'(t)$ en el punto $t \in I$ se denomina el **vector tangente** o vector velocidad de la curva en $t$.
+
+## Definición de Derivada Vectorial
+
+Si expresamos $\alpha(t)$ en términos de sus funciones coordenadas:
+
+$$\alpha(t) = (x(t), y(t), z(t))$$
+
+Entonces el vector tangente viene dado por la derivada de cada una de sus componentes:
+
+$$\alpha'(t) = \left( \frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt} \right)$$
+
+Físicamente, la norma del vector tangente $\|\alpha'(t)\|$ representa la **rapidez** o velocidad escalar del movimiento en el instante $t$.
+
+---
+
+## Cuestionario sobre Vector Tangente
+
+Valida tu comprensión del vector velocidad:
+
+<QuizMultipleChoice 
+  question="Si una curva paramétrica tiene la forma \alpha(t) = (t^2, t^3, 0), ¿cuál es su vector tangente en t = 1?"
+  optionsString="(2, 3, 0);(1, 1, 0);(2, 6, 0);(0, 0, 0)"
+  correctIndex={0}
+  explanation="Derivando cada componente de \alpha(t) obtenemos \alpha'(t) = (2t, 3t^2, 0). Evaluando en t = 1 resulta \alpha'(1) = (2, 3, 0)."
+/>
+
+---
+
+## Desafío de Velocidad Constante
+
+<SemanticEval 
+  prompt="Si una curva parametrizada tiene rapidez constante ||\alpha'(t)|| = c para todo t, demuestra formalmente que el vector velocidad \alpha'(t) y el vector aceleración \alpha''(t) son ortogonales en todo punto."
+/>

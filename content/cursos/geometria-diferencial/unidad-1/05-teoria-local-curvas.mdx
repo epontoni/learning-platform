@@ -1,0 +1,39 @@
+# Teoría Local de Curvas por Longitud de Arco
+
+Dada una curva $\alpha: I \to \mathbb{R}^3$ parametrizada por longitud de arco $s$, definimos los elementos geométricos del **triedro de Frenet-Serret**:
+
+1. **Vector Tangente Unitario**: $T(s) = \alpha'(s)$ (tiene norma unitaria constante).
+2. **Curvatura**: $\kappa(s) = \|T'(s)\|$. Si $\kappa(s) \neq 0$, definimos:
+3. **Vector Normal Principal**: $N(s) = \frac{T'(s)}{\kappa(s)}$.
+4. **Vector Binormal**: $B(s) = T(s) \times N(s)$.
+
+## Ecuaciones de Frenet-Serret
+
+Estas ecuaciones describen cómo rota el triedro móvil a lo largo de la curva:
+
+$$\begin{aligned}
+T'(s) &= \kappa(s) N(s) \\
+N'(s) &= -\kappa(s) T(s) + \tau(s) B(s) \\
+B'(s) &= -\tau(s) N(s)
+\end{aligned}$$
+
+Donde $\tau(s)$ representa la **torsión** de la curva en el punto $s$, indicando cuánto se desvía la curva de ser plana.
+
+---
+
+## Cuestionario de Frenet
+
+<QuizMultipleChoice 
+  question="¿Qué condición geométrica representa una torsión idénticamente nula \tau(s) \equiv 0?"
+  optionsString="La curva está completamente contenida en un plano constante.;La curva es una recta lineal.;La curvatura es constante.;La velocidad de la curva es cero."
+  correctIndex={0}
+  explanation="Si la torsión es cero, el vector binormal B es constante, lo cual implica algebraicamente que la curva reside íntegramente en el plano ortogonal a B."
+/>
+
+---
+
+## Desafío de Torsión y Planaridad
+
+<SemanticEval 
+  prompt="Demuestra formalmente que una curva parametrizada por longitud de arco con curvatura positiva es una porción de circunferencia si y solo si su curvatura es constante y su torsión es cero."
+/>

@@ -1,0 +1,38 @@
+# Introducción a la Geometría Diferencial
+
+La geometría diferencial es la disciplina matemática que utiliza las herramientas del análisis matemático y el álgebra lineal para estudiar la geometría de curvas y superficies en el espacio euclidiano $\mathbb{R}^3$.
+
+En esta primera sección, abordaremos las ideas intuitivas del concepto de curva y cómo la noción intuitiva de traza debe formalizarse para diferenciar la curva como función de su imagen geométrica en el espacio.
+
+## Traza vs. Parametrización
+
+Intuitivamente, una curva es el camino que describe un punto en movimiento. Sin embargo, matemáticamente debemos diferenciar dos conceptos:
+1. **La traza (o imagen)**: Es el conjunto de puntos del espacio ocupados por la curva. Es un objeto puramente geométrico.
+2. **La parametrización**: Es la función que describe *cómo* se recorre esa traza a lo largo del tiempo.
+
+Por ejemplo, las funciones $\alpha(t) = (\cos t, \sin t)$ y $\beta(t) = (\cos 2t, \sin 2t)$ tienen la misma traza (la circunferencia unitaria), pero describen movimientos con velocidades distintas.
+
+$$\alpha(t) \neq \beta(t) \quad \text{aunque} \quad \alpha(I) = \beta(I)$$
+
+---
+
+## Cuestionario Conceptual
+
+Valida tus conocimientos fundamentales de la diferencia entre traza y parametrización:
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes afirmaciones describe de manera exacta la relación entre una curva diferencial y su traza?"
+  optionsString="Dos parametrizaciones totalmente distintas pueden dar lugar a la misma traza geométrica.;La traza define unívocamente a la parametrización de la curva.;Una curva diferenciable tiene infinitas trazas asociadas.;La traza es una función y la parametrización es un conjunto."
+  correctIndex={0}
+  explanation="Como se muestra en el ejemplo de la circunferencia unitaria, distintas parametrizaciones (como cambiar la velocidad del recorrido) dan lugar al mismo conjunto geométrico de puntos (traza)."
+/>
+
+---
+
+## Desafío de Análisis
+
+Demuestra formalmente tu comprensión completando la justificación del siguiente desafío teórico:
+
+<SemanticEval 
+  prompt="Explica la diferencia matemática entre una curva paramétrica diferenciable y su traza en R^2. Da un contraejemplo de una parametrización cuya traza tenga una esquina o cúspide pero cuya función sea infinitamente diferenciable."
+/>

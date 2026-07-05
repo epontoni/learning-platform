@@ -1,0 +1,37 @@
+# La Forma Canónica Local
+
+La forma canónica local nos permite estudiar el comportamiento geométrico de una curva regular en las inmediaciones de un punto $s = 0$ proyectando la curva sobre los planos determinados por el triedro de Frenet-Serret.
+
+Asumiendo $\alpha(0) = (0,0,0)$ y desarrollando en serie de Taylor con respecto al parámetro de longitud de arco $s$:
+
+$$\alpha(s) = \alpha(0) + s \alpha'(0) + \frac{s^2}{2} \alpha''(0) + \frac{s^3}{6} \alpha'''(0) + R(s^3)$$
+
+## Proyección en el Triedro de Frenet
+
+Sustituyendo los vectores de Frenet obtenemos la aproximación canónica local:
+
+$$\alpha(s) = \left( s - \frac{\kappa^2 s^3}{6}, \frac{\kappa s^2}{2} + \frac{\kappa' s^3}{6}, \frac{\kappa \tau s^3}{6} \right) + R(s^3)$$
+
+Estas proyecciones determinan tres curvas planas aproximadas:
+1. **Plano Osculador ($T-N$)**: Su proyección es aproximadamente una parábola: $y \approx \frac{\kappa}{2} x^2$.
+2. **Plano Rectificante ($T-B$)**: Su proyección es aproximadamente una cúbica.
+3. **Plano Normal ($N-B$)**: Su proyección es aproximadamente una cúspide semi-cúbica.
+
+---
+
+## Cuestionario de Forma Local
+
+<QuizMultipleChoice 
+  question="¿Qué plano representa la mejor aproximación al comportamiento de la curva en el límite s \to 0?"
+  optionsString="El plano osculador (T-N).;El plano rectificante (T-B).;El plano normal (N-B).;Cualquier plano ortogonal al vector tangente."
+  correctIndex={0}
+  explanation="El plano osculador (T-N) contiene al vector velocidad y al vector aceleración, representando el plano local de máxima aproximación (orden 2) a la curva."
+/>
+
+---
+
+## Desafío de Proyecciones
+
+<SemanticEval 
+  prompt="Analiza la proyección de la curva local sobre el plano normal y justifica formalmente por qué la torsión de la curva gobierna el sentido en el que la curva cruza el plano osculador."
+/>

@@ -1,0 +1,36 @@
+# Curvas Regulares y Longitud de Arco
+
+Una curva parametrizada diferenciable $\alpha: I \to \mathbb{R}^3$ se dice que es **regular** si su vector velocidad no se anula en ningún punto del intervalo:
+
+$$\alpha'(t) \neq \vec{0} \quad \forall t \in I$$
+
+La regularidad asegura la existencia geométrica de una recta tangente bien definida en cada punto de la traza.
+
+## Longitud de Arco
+
+La longitud de arco de una curva regular entre dos instantes $a$ y $b$ se define como la integral de la rapidez:
+
+$$s = \int_{a}^{b} \|\alpha'(t)\| \, dt$$
+
+Toda curva regular admite una reparametrización por longitud de arco $s$, bajo la cual el vector velocidad tiene norma unitaria constante:
+
+$$\left\|\frac{d\alpha}{ds}\right\| = 1$$
+
+---
+
+## Cuestionario sobre Regularidad
+
+<QuizMultipleChoice 
+  question="¿Por qué exigimos que \alpha'(t) \neq 0 en la definición de curva regular?"
+  optionsString="Para garantizar que el vector unitario tangente esté bien definido y evitar cúspides o singularidades en la traza.;Porque si la velocidad se anula, la curva deja de ser diferenciable.;Para que la longitud de arco sea siempre cero.;Para simplificar el cálculo de derivadas de orden superior."
+  correctIndex={0}
+  explanation="Si \alpha'(t) = 0, no podemos normalizar el vector tangente para obtener el vector unitario, y físicamente permite que la traza tenga esquinas puntiagudas (cúspides) a pesar de ser analíticamente diferenciable."
+/>
+
+---
+
+## Desafío de Reparametrización
+
+<SemanticEval 
+  prompt="Dada la hélice circular \alpha(t) = (a\cos t, a\sin t, bt) con a, b > 0. Encuentra la función de longitud de arco s(t) partiendo de t = 0 y reparametriza la curva en términos del parámetro s."
+/>

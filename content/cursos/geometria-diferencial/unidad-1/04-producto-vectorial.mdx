@@ -1,0 +1,35 @@
+# El Producto Vectorial en $\mathbb{R}^3$
+
+El producto vectorial es una herramienta fundamental en la geometría diferencial de curvas espaciales, ya que permite construir vectores normales ortogonales al vector tangente a partir del vector velocidad y aceleración.
+
+Dados dos vectores $\vec{u}, \vec{v} \in \mathbb{R}^3$, su producto vectorial $\vec{u} \times \vec{v}$ es el único vector que cumple:
+
+1. Es perpendicular a $\vec{u}$ y a $\vec{v}$.
+2. Su norma es el área del paralelogramo determinado por ambos vectores:
+   $$\|\vec{u} \times \vec{v}\| = \|\vec{u}\| \|\vec{v}\| \sin\theta$$
+3. La terna $(\vec{u}, \vec{v}, \vec{u} \times \vec{v})$ forma una base orientada positivamente.
+
+## Cálculo por Determinante
+
+En coordenadas cartesianas:
+
+$$\vec{u} \times \vec{v} = \det \begin{pmatrix} \vec{i} & \vec{j} & \vec{k} \\ u_x & u_y & u_z \\ v_x & v_y & v_z \end{pmatrix}$$
+
+---
+
+## Cuestionario sobre Producto Vectorial
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes es una propiedad geométrica clave del producto vectorial?"
+  optionsString="El vector resultante es ortogonal a ambos vectores de entrada.;El producto vectorial es conmutativo.;El producto vectorial de dos vectores paralelos es de norma máxima.;Es distributivo con respecto al producto escalar."
+  correctIndex={0}
+  explanation="Por definición, \vec{u} \times \vec{v} es simultáneamente perpendicular a \vec{u} y a \vec{v}."
+/>
+
+---
+
+## Desafío algebraico
+
+<SemanticEval 
+  prompt="Demuestra usando propiedades del determinante algebraico la identidad de Lagrange para el producto vectorial: ||u \times v||^2 = ||u||^2 ||v||^2 - (u \cdot v)^2."
+/>
