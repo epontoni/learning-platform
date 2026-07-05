@@ -5,6 +5,7 @@ import { useMDXContext } from './MDXContext';
 import { useProgress } from '@/hooks/useProgress';
 import { Check, X, Award, HelpCircle } from 'lucide-react';
 import { MathRenderer } from '@/components/MathRenderer';
+import { playCorrectSound, playWrongSound } from '@/utils/celebration';
 
 interface QuizMultipleChoiceProps {
   question: string;
@@ -51,6 +52,9 @@ export function QuizMultipleChoice({
     updateQuizScore(courseId, unitId, topicId, score);
     if (score === 100) {
       markCompleted(courseId, unitId, topicId, true);
+      playCorrectSound();
+    } else {
+      playWrongSound();
     }
   };
 
