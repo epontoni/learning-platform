@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
+import { Heart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Emanuel.P | Plataforma de Aprendizaje Matemático",
@@ -42,9 +43,16 @@ export default function RootLayout({
               </div>
               <div className="flex items-center space-x-4">
                 <ThemeToggle />
-                <div className="w-9 h-9 rounded-full bg-[var(--accent)] text-white font-bold text-xs flex items-center justify-center border border-[var(--glass-border)] cursor-pointer hover:bg-[var(--accent-hover)] transition-colors shadow-sm">
-                  EP
-                </div>
+                <a
+                  href="https://link.mercadopago.com.ar/emanuelpontoni"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[var(--accent)] to-[#009EE3] text-white text-xs font-extrabold rounded-xl border border-[var(--glass-border)] shadow-md hover:shadow-lg hover:shadow-[var(--accent)]/20 transition-all duration-300 hover:scale-105 active:scale-95 animate-pulse-glow"
+                >
+                  <Heart className="h-4 w-4 fill-white text-white group-hover:animate-heartbeat shrink-0" />
+                  <span className="hidden sm:inline">Apoyar Proyecto</span>
+                  <span className="sm:hidden">Apoyar</span>
+                </a>
               </div>
             </div>
           </header>

@@ -1,5 +1,14 @@
 [
   {
+    "id": "estructuras-algebraicas",
+    "title": "Estructuras Algebraicas",
+    "description": "Un estudio unificado de los sistemas algebraicos abstractos —como grupos, anillos, campos, reticulados y álgebras de Boole — y su poderoso uso en áreas como la criptografía, la teoría de códigos, el diseño de bases de datos y la teoría de autómatas.",
+    "category": "Álgebra",
+    "difficulty": "Avanzado",
+    "active": true,
+    "entryPoint": "/cursos/estructuras-algebraicas/unidad-1/01-introduccion"
+  },
+  {
     "id": "geometria-diferencial",
     "title": "Geometría Diferencial",
     "description": "Geometría Diferencial de Curvas y Superficies.",
@@ -14,7 +23,7 @@
     "description": "Conceptos de lógica proposicional, cuantificadores, espacios vectoriales y transformaciones lineales.",
     "category": "Álgebra",
     "difficulty": "Intermedio",
-    "active": true,
+    "active": false,
     "entryPoint": "/cursos/algebra/unidad-1/01-logica"
   },
   {
@@ -23,7 +32,7 @@
     "description": "Límites, continuidad, derivadas, integración de funciones de una y varias variables.",
     "category": "Análisis",
     "difficulty": "Avanzado",
-    "active": true,
+    "active": false,
     "entryPoint": "/cursos/calculo/unidad-1/01-limites"
   },
   {
@@ -32,7 +41,7 @@
     "description": "Aritmética modular, divisibilidad, números primos y algoritmos de cifrado RSA.",
     "category": "Matemática Discreta",
     "difficulty": "Principiante",
-    "active": true,
+    "active": false,
     "entryPoint": "/cursos/numeros/unidad-1/01-modular"
   }
 ]
