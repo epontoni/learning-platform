@@ -24,8 +24,13 @@ export function MDXContextProvider({
   topicId: string;
   content: string;
 }) {
+  const value = React.useMemo(
+    () => ({ courseId, unitId, topicId, content }),
+    [courseId, unitId, topicId, content]
+  );
+
   return (
-    <MDXContext.Provider value={{ courseId, unitId, topicId, content }}>
+    <MDXContext.Provider value={value}>
       {children}
     </MDXContext.Provider>
   );
