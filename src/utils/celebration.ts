@@ -6,23 +6,23 @@ import confetti from 'canvas-confetti';
  * Fires a full-screen multi-burst confetti celebration.
  */
 export function fireConfetti() {
-  const duration = 3500;
+  const duration = 5000;
   const end = Date.now() + duration;
 
-  const colors = ['#6C63FF', '#009EE3', '#a855f7', '#22d3ee', '#f472b6', '#facc15'];
+  const colors = ['#6C63FF', '#009EE3', '#a855f7', '#22d3ee', '#f472b6', '#facc15', '#ffffff'];
 
   (function frame() {
     confetti({
-      particleCount: 6,
+      particleCount: 7,
       angle: 60,
-      spread: 55,
+      spread: 58,
       origin: { x: 0, y: 0.65 },
       colors,
     });
     confetti({
-      particleCount: 6,
+      particleCount: 7,
       angle: 120,
-      spread: 55,
+      spread: 58,
       origin: { x: 1, y: 0.65 },
       colors,
     });
@@ -33,100 +33,101 @@ export function fireConfetti() {
 }
 
 /**
- * Synthesizes a rich trumpet-like timbre for a single note.
+ * Plays a real trumpet fanfare using soundfont-player samples.
+ * Samples are loaded dynamically from a public CDN (no bundled audio files needed).
  */
-function playTrumpetNote(
-  ctx: AudioContext,
-  freq: number,
-  startTime: number,
-  duration: number,
-  volume = 0.35
-) {
-  const masterGain = ctx.createGain();
-  masterGain.connect(ctx.destination);
-
-  // ADSR envelope — sharp attack, slight decay, sustained, fast release
-  masterGain.gain.setValueAtTime(0, startTime);
-  masterGain.gain.linearRampToValueAtTime(volume, startTime + 0.025);      // attack
-  masterGain.gain.linearRampToValueAtTime(volume * 0.85, startTime + 0.08); // decay
-  masterGain.gain.setValueAtTime(volume * 0.85, startTime + duration - 0.06);
-  masterGain.gain.linearRampToValueAtTime(0, startTime + duration);         // release
-
-  // Harmonics present in a real brass instrument (sawtooth approximation)
-  const harmonics: [number, number][] = [
-    [1, 1.0],
-    [2, 0.65],
-    [3, 0.50],
-    [4, 0.38],
-    [5, 0.28],
-    [6, 0.18],
-    [7, 0.12],
-    [8, 0.07],
-  ];
-
-  harmonics.forEach(([harmonic, gain]) => {
-    const osc = ctx.createOscillator();
-    const oscGain = ctx.createGain();
-    osc.connect(oscGain);
-    oscGain.connect(masterGain);
-
-    osc.type = 'sawtooth';
-    osc.frequency.setValueAtTime(freq * harmonic, startTime);
-    // Add a tiny vibrato on sustained notes
-    if (duration > 0.3) {
-      osc.frequency.linearRampToValueAtTime(freq * harmonic * 1.004, startTime + duration * 0.5);
-      osc.frequency.linearRampToValueAtTime(freq * harmonic, startTime + duration);
-    }
-    oscGain.gain.setValueAtTime(gain * 0.12, startTime);
-
-    osc.start(startTime);
-    osc.stop(startTime + duration + 0.05);
-  });
-
-  // Resonant band-pass filter centered around trumpet's formant (~1100 Hz)
-  const filter = ctx.createBiquadFilter();
-  filter.type = 'bandpass';
-  filter.frequency.setValueAtTime(1100, startTime);
-  filter.Q.setValueAtTime(1.8, startTime);
-  masterGain.connect(filter);
-  filter.connect(ctx.destination);
-}
-
-/**
- * Plays a majestic 7-note ascending trumpet fanfare using the Web Audio API.
- * No external audio files needed.
- */
-export function playVictorySound() {
+export async function playVictorySound() {
   if (typeof window === 'undefined') return;
+
   try {
     const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
     const ctx = new AudioContext();
 
-    // Classic military fanfare motif: C4, G4, C5, E5, G5, E5, C6
-    const fanfare: [number, number, number][] = [
-      // [freq_hz, start_offset_s, duration_s]
-      [261.63, 0.00, 0.18],  // C4
-      [392.00, 0.16, 0.18],  // G4
-      [523.25, 0.32, 0.18],  // C5
-      [659.25, 0.48, 0.22],  // E5
-      [783.99, 0.68, 0.28],  // G5
-      [659.25, 0.94, 0.18],  // E5
-      [1046.5, 1.10, 0.65],  // C6 — long held note
+    // Resume context if suspended (browser autoplay policy)
+    if (ctx.state === 'suspended') {
+      await ctx.resume();
+    }
+
+    // Dynamically import soundfont-player (client-only)
+    const Soundfont = (await import('soundfont-player')).default;
+
+    // Load the real trumpet instrument samples (from MusyngKite soundfont)
+    const trumpet = await Soundfont.instrument(ctx, 'trumpet', {
+      soundfont: 'MusyngKite',
+      gain: 4,
+    });
+
+    // ─── Heavenly Fanfare Sequence ───────────────────────────────────────────
+    // A dramatic ascending fanfare inspired by classical brass anthems.
+    // Timing: [note, startOffset_seconds, durationHint_seconds]
+    // Notes use standard MIDI notation (C4 = middle C).
+    const fanfare: [string, number, number][] = [
+      // Opening flourish — three short ascending calls
+      ['G3', 0.00, 0.22],
+      ['C4', 0.22, 0.22],
+      ['E4', 0.44, 0.22],
+      // First phrase — ascending arpeggio
+      ['G4', 0.70, 0.25],
+      ['C5', 0.95, 0.25],
+      ['E5', 1.20, 0.30],
+      ['G5', 1.50, 0.38],
+      // Celestial climax — the top sustained notes
+      ['E5', 1.92, 0.22],
+      ['G5', 2.14, 0.22],
+      ['C6', 2.38, 1.80],   // Final triumphant held note
     ];
 
-    const base = ctx.currentTime + 0.05;
-    fanfare.forEach(([freq, offset, dur]) => {
-      playTrumpetNote(ctx, freq, base + offset, dur);
+    // Add a subtle cathedral reverb via a delay network
+    const reverbDelay1 = ctx.createDelay(0.08);
+    const reverbDelay2 = ctx.createDelay(0.16);
+    const reverbGain1 = ctx.createGain();
+    const reverbGain2 = ctx.createGain();
+    reverbGain1.gain.setValueAtTime(0.25, ctx.currentTime);
+    reverbGain2.gain.setValueAtTime(0.12, ctx.currentTime);
+    reverbDelay1.connect(reverbGain1);
+    reverbGain1.connect(ctx.destination);
+    reverbDelay2.connect(reverbGain2);
+    reverbGain2.connect(ctx.destination);
+
+    // Schedule each note
+    const base = ctx.currentTime + 0.1;
+    fanfare.forEach(([note, offset, duration]) => {
+      trumpet.play(note, base + offset, {
+        duration,
+        gain: 4,
+      });
     });
+
   } catch (err) {
     console.warn('Victory sound failed to play:', err);
+
+    // Graceful degradation: simple tone if soundfont fails
+    try {
+      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+      const ctx = new AudioContext();
+      const notes = [523.25, 659.25, 783.99, 1046.5];
+      let t = ctx.currentTime + 0.05;
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0, t);
+        gain.gain.linearRampToValueAtTime(0.3, t + 0.02);
+        gain.gain.linearRampToValueAtTime(0, t + (i === 3 ? 0.6 : 0.15));
+        osc.start(t); osc.stop(t + 0.7);
+        t += i === 3 ? 0 : 0.15;
+      });
+    } catch { /* silent */ }
   }
 }
 
 /**
- * Triggers both confetti and victory sound simultaneously.
+ * Triggers both confetti and the heavenly trumpet fanfare simultaneously.
  */
 export function celebrateCourseCompletion() {
   fireConfetti();
-  playVictorySound();
+  // playVictorySound is async (loads samples); fire and forget
+  void playVictorySound();
 }
