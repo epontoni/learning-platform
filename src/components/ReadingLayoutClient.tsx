@@ -255,7 +255,7 @@ export function ReadingLayoutClient({
                       onClick={() => setFeedback(feedback === 'like' ? null : 'like')}
                       className={`p-2 border rounded-lg transition-colors ${
                         feedback === 'like'
-                          ? 'border-emerald-500 bg-emerald-50/20 text-emerald-600'
+                          ? 'border-emerald-500 bg-emerald-50/20 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400'
                           : 'border-[var(--glass-border)] hover:bg-[var(--bg-tertiary)] text-[var(--text-secondary)]'
                       }`}
                       aria-label="Like"
@@ -266,7 +266,7 @@ export function ReadingLayoutClient({
                       onClick={() => setFeedback(feedback === 'dislike' ? null : 'dislike')}
                       className={`p-2 border rounded-lg transition-colors ${
                         feedback === 'dislike'
-                          ? 'border-rose-500 bg-rose-50/20 text-rose-600'
+                          ? 'border-rose-500 bg-rose-50/20 text-rose-600 dark:bg-rose-950/20 dark:text-rose-400'
                           : 'border-[var(--glass-border)] hover:bg-[var(--bg-tertiary)] text-[var(--text-secondary)]'
                       }`}
                       aria-label="Dislike"
@@ -354,7 +354,7 @@ export function ReadingLayoutClient({
                   onClick={() => setFeedback(feedback === 'like' ? null : 'like')}
                   className={`p-2 border rounded-lg transition-colors ${
                     feedback === 'like'
-                      ? 'border-emerald-500 bg-emerald-50/20 text-emerald-600'
+                      ? 'border-emerald-500 bg-emerald-50/20 text-emerald-600 dark:bg-emerald-950/20 dark:text-emerald-400'
                       : 'border-[var(--glass-border)] hover:bg-[var(--bg-tertiary)] text-[var(--text-secondary)]'
                   }`}
                   aria-label="Like"
@@ -365,7 +365,7 @@ export function ReadingLayoutClient({
                   onClick={() => setFeedback(feedback === 'dislike' ? null : 'dislike')}
                   className={`p-2 border rounded-lg transition-colors ${
                     feedback === 'dislike'
-                      ? 'border-rose-500 bg-rose-50/20 text-rose-600'
+                      ? 'border-rose-500 bg-rose-50/20 text-rose-600 dark:bg-rose-950/20 dark:text-rose-400'
                       : 'border-[var(--glass-border)] hover:bg-[var(--bg-tertiary)] text-[var(--text-secondary)]'
                   }`}
                   aria-label="Dislike"
