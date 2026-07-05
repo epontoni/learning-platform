@@ -25,18 +25,18 @@ export default async function Home() {
       <div className="relative overflow-hidden bg-[var(--bg-secondary)] border border-[var(--glass-border)] rounded-3xl p-8 md:p-12 shadow-sm">
         {/* Animated Cartesian grid background */}
         <MathCanvas />
-        
+
         {/* Soft gradient overlay to blend canvas into secondary background */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-secondary)] via-[var(--bg-secondary)]/85 to-transparent pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl space-y-5">
           <div className="inline-flex items-center space-x-2 bg-[var(--border)] text-[var(--accent)] px-3 py-1 rounded-full text-xs font-semibold">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>Profesor de Matemática & Desarrollador Frontend Sandbox</span>
+            <span>Explora los mejores recursos para aprender</span>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-[var(--text-primary)]">
-            Aprende Matemáticas con <span className="text-gradient">Rigor Lógico</span>
+            Aprende <span className="text-gradient">Matemáticas</span>
           </h1>
 
           <p className="text-sm md:text-base text-[var(--text-secondary)] leading-relaxed max-w-2xl">
@@ -75,7 +75,7 @@ export default async function Home() {
               className="group bg-[var(--bg-secondary)] border border-[var(--glass-border)] rounded-2xl p-6 flex flex-col justify-between hover:shadow-md hover:border-[var(--accent)]/30 transition-all duration-300 relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[var(--accent)]/10 to-transparent" />
-              
+
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-wider text-[var(--text-muted)]">
                   {course.category} • Curso Universitario
@@ -92,7 +92,7 @@ export default async function Home() {
                 <span className="text-[10px] font-bold text-[var(--text-muted)]">
                   {course.difficulty === 'Principiante' ? '∽ Iniciante' : course.difficulty === 'Intermedio' ? '∽ Intermedio' : '↗ Avanzado'}
                 </span>
-                
+
                 {course.active && course.entryPoint ? (
                   <Link
                     href={course.entryPoint}
