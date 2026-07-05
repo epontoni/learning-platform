@@ -174,7 +174,7 @@ export function CourseGrid({
       {/* Courses Grid */}
       {filteredCourses.length === 0 ? (
         showTabs && !showFilters ? (
-          <div className="text-center py-16 border border-dashed border-[var(--glass-border)] rounded-2xl bg-[var(--bg-secondary)]/30 space-y-4 max-w-md mx-auto">
+          <div className="text-center py-16 border border-dashed border-[var(--glass-border)] rounded-2xl bg-[var(--bg-secondary)]/30 space-y-4 w-full">
             <p className="text-sm text-[var(--text-secondary)] font-medium">Aún no tienes certificaciones cursando en esta categoría.</p>
             <p className="text-xs text-[var(--text-muted)]">Los cursos que comiences a estudiar aparecerán organizados aquí.</p>
             <div className="pt-2">
