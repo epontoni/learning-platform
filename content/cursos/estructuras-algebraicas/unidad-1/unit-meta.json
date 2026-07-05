@@ -1,0 +1,27 @@
+{
+  "id": "unidad-1",
+  "title": "Unidad 1: Operaciones Binarias",
+  "description": "Estudio formal del concepto de operación binaria, clausura algebraica, propiedades de asociatividad, conmutatividad y elementos notables.",
+  "topics": [
+    {
+      "id": "01-motivacion",
+      "title": "1.1 Motivación",
+      "duration": "10 min"
+    },
+    {
+      "id": "02-definicion-propiedades",
+      "title": "1.2 Definición y propiedades",
+      "duration": "15 min"
+    },
+    {
+      "id": "03-tablas",
+      "title": "1.3 Tablas",
+      "duration": "12 min"
+    },
+    {
+      "id": "04-advertencia",
+      "title": "1.4 Algunas palabras de advertencia",
+      "duration": "8 min"
+    }
+  ]
+}

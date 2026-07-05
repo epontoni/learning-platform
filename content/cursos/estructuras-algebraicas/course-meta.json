@@ -1,0 +1,29 @@
+{
+  "id": "estructuras-algebraicas",
+  "title": "Estructuras Algebraicas",
+  "description": "Un estudio unificado de los sistemas algebraicos abstractos —como grupos, anillos, campos, reticulados y álgebras de Boole — y su poderoso uso en áreas como la criptografía, la teoría de códigos, el diseño de bases de datos y la teoría de autómatas.",
+  "units": [
+    {
+      "id": "unidad-1",
+      "title": "Unidad 1: Operaciones Binarias",
+      "topics": [
+        {
+          "id": "01-motivacion",
+          "title": "1.1 Motivación"
+        },
+        {
+          "id": "02-definicion-propiedades",
+          "title": "1.2 Definición y propiedades"
+        },
+        {
+          "id": "03-tablas",
+          "title": "1.3 Tablas"
+        },
+        {
+          "id": "04-advertencia",
+          "title": "1.4 Algunas palabras de advertencia"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+# Definición y Propiedades
+
+Una **operación binaria** $*$ sobre un conjunto no vacío $S$ es una regla que asigna a cada par ordenado $(a, b) \in S \times S$ un único elemento $a * b \in S$.
+
+$$\begin{aligned}
+*: S \times S &\to S \\
+(a, b) &\mapsto a * b
+\end{aligned}$$
+
+## Propiedades Estructurales
+
+Sean $a, b, c \in S$, definimos las siguientes propiedades fundamentales:
+
+1. **Asociatividad**: El orden de agrupación de los elementos no altera el resultado final:
+   $$(a * b) * c = a * (b * c)$$
+2. **Conmutatividad**: El orden de los operandos no altera el resultado:
+   $$a * b = b * a$$
+3. **Elemento Neutro (Identidad)**: Existe un elemento $e \in S$ tal que:
+   $$a * e = e * a = a \quad \forall a \in S$$
+4. **Elemento Simétrico (Inverso)**: Para cada $a \in S$, existe un $a' \in S$ tal que:
+   $$a * a' = a' * a = e$$
+
+---
+
+## Cuestionario de Propiedades
+
+<QuizMultipleChoice 
+  question="Si una operación binaria $*$ es conmutativa y asociativa, ¿cuál de las siguientes igualdades es correcta para cualquier terna $a, b, c$?"
+  optionsString="$a * (b * c) = c * (b * a)$;$a * b = c * a$;$(a * b) * c = a * (b * b)$;$a * (b * c) = a * c$"
+  correctIndex={0}
+  explanation="Por conmutatividad y asociatividad, podemos reordenar y reagrupar los elementos: a * (b * c) = a * (c * b) = (a * c) * b = (c * a) * b = c * (a * b) = c * (b * a)."
+/>
+
+---
+
+## Desafío de Unicidad del Neutro
+
+<SemanticEval 
+  prompt="Demuestra formalmente que si una estructura algebraica $(S, *)$ posee un elemento neutro (o identidad), este elemento es único."
+/>

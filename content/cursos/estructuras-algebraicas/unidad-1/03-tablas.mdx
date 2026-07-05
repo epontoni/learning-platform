@@ -1,0 +1,41 @@
+# Tablas de Operaciones (Tablas de Cayley)
+
+Para conjuntos finitos $S$, una operación binaria $*$ se puede representar de forma compacta mediante una tabla de doble entrada, denominada **tabla de Cayley** en honor al matemático Arthur Cayley.
+
+Dada una tabla para el conjunto $S = \{x_1, x_2, \dots, x_n\}$, el elemento ubicado en la intersección de la fila $x_i$ y la columna $x_j$ es el resultado de realizar $x_i * x_j$.
+
+## Análisis Visual de Propiedades
+
+Podemos deducir propiedades estructurales directamente examinando visualmente la tabla:
+
+1. **Conmutatividad**: La tabla debe ser simétrica respecto a la diagonal principal.
+2. **Elemento Neutro**: La fila y columna correspondientes al elemento neutro $e$ deben ser copias idénticas del encabezado exterior.
+3. **Inverso**: Si cada fila y columna contiene el elemento neutro $e$, cada elemento tiene un simétrico.
+
+### Ejemplo: Grupo de Klein $V_4$
+
+| $*$ | $e$ | $a$ | $b$ | $c$ |
+|---|---|---|---|---|
+| $e$ | $e$ | $a$ | $b$ | $c$ |
+| $a$ | $a$ | $e$ | $c$ | $b$ |
+| $b$ | $b$ | $c$ | $e$ | $a$ |
+| $c$ | $c$ | $b$ | $a$ | $e$ |
+
+---
+
+## Cuestionario sobre Tablas de Cayley
+
+<QuizMultipleChoice 
+  question="¿Qué propiedad visual en una tabla de Cayley garantiza de manera inmediata que la operación es conmutativa?"
+  optionsString="La simetría respecto a la diagonal principal.;Que la primera fila sea idéntica al encabezado.;Que ningún elemento se repita en la misma columna.;Que la diagonal principal contenga únicamente al elemento neutro."
+  correctIndex={0}
+  explanation="La simetría respecto a la diagonal principal asegura que el elemento en la fila i y columna j sea igual al de la fila j y columna i, es decir, x_i * x_j = x_j * x_i."
+/>
+
+---
+
+## Desafío del Cuadrado Latino
+
+<SemanticEval 
+  prompt="Dada la tabla de Cayley de un grupo finito, se dice que forma un 'cuadrado latino' (ningún elemento se repita en una misma fila o columna). Demuestra analíticamente que si un conjunto finito con una operación asociativa posee la propiedad de cancelación a izquierda y derecha, entonces su tabla de operación es un cuadrado latino."
+/>
