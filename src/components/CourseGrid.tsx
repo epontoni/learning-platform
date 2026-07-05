@@ -17,14 +17,16 @@ interface Course {
 
 interface CourseGridProps {
   initialCourses: Course[];
+  initialTab?: 'todos' | 'en-curso' | 'finalizados';
+  hideFilters?: boolean;
 }
 
-export function CourseGrid({ initialCourses }: CourseGridProps) {
+export function CourseGrid({ initialCourses, initialTab = 'todos', hideFilters = false }: CourseGridProps) {
   const { isLoaded, progress } = useProgress();
   const [search, setSearch] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('Todos');
   const [selectedDifficulty, setSelectedDifficulty] = React.useState('Todos');
-  const [activeTab, setActiveTab] = React.useState<'todos' | 'en-curso' | 'finalizados'>('todos');
+  const [activeTab, setActiveTab] = React.useState<'todos' | 'en-curso' | 'finalizados'>(initialTab);
 
   // Total topics mapping per course
   const totalTopicsMap: { [id: string]: number } = {
@@ -65,41 +67,44 @@ export function CourseGrid({ initialCourses }: CourseGridProps) {
   return (
     <div className="space-y-8">
       {/* Tabs like DigitalHouse (En curso, Finalizados, Todos) */}
-      <div className="flex space-x-2 border-b border-[var(--glass-border)] pb-1">
-        <button
-          onClick={() => setActiveTab('todos')}
-          className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
-            activeTab === 'todos'
-              ? 'bg-[var(--accent)] text-white'
-              : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
-          }`}
-        >
-          Todos los cursos
-        </button>
-        <button
-          onClick={() => setActiveTab('en-curso')}
-          className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
-            activeTab === 'en-curso'
-              ? 'bg-[var(--accent)] text-white'
-              : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
-          }`}
-        >
-          En curso
-        </button>
-        <button
-          onClick={() => setActiveTab('finalizados')}
-          className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
-            activeTab === 'finalizados'
-              ? 'bg-[var(--accent)] text-white'
-              : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
-          }`}
-        >
-          Finalizados
-        </button>
-      </div>
+      {!hideFilters && (
+        <div className="flex space-x-2 border-b border-[var(--glass-border)] pb-1">
+          <button
+            onClick={() => setActiveTab('todos')}
+            className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
+              activeTab === 'todos'
+                ? 'bg-[var(--accent)] text-white'
+                : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
+            }`}
+          >
+            Todos los cursos
+          </button>
+          <button
+            onClick={() => setActiveTab('en-curso')}
+            className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
+              activeTab === 'en-curso'
+                ? 'bg-[var(--accent)] text-white'
+                : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
+            }`}
+          >
+            En curso
+          </button>
+          <button
+            onClick={() => setActiveTab('finalizados')}
+            className={`px-4 py-2 text-sm font-bold transition-all rounded-lg ${
+              activeTab === 'finalizados'
+                ? 'bg-[var(--accent)] text-white'
+                : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]'
+            }`}
+          >
+            Finalizados
+          </button>
+        </div>
+      )}
 
       {/* Search and Filters panel */}
-      <div className="bg-[var(--bg-secondary)] border border-[var(--glass-border)] p-5 rounded-2xl flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm">
+      {!hideFilters ? (
+        <div className="bg-[var(--bg-secondary)] border border-[var(--glass-border)] p-5 rounded-2xl flex flex-col md:flex-row gap-4 items-center justify-between shadow-sm">
         <div className="relative w-full md:max-w-md">
           <Search className="absolute left-3 top-3 h-4 w-4 text-[var(--text-muted)]" />
           <input
@@ -154,7 +159,8 @@ export function CourseGrid({ initialCourses }: CourseGridProps) {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      ) : null}
 
       {/* Courses Grid */}
       {filteredCourses.length === 0 ? (

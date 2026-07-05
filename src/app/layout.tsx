@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 import { Heart } from "lucide-react";
+import { HeaderNav } from "@/components/HeaderNav";
 
 export const metadata: Metadata = {
   title: "Emanuel.P | Plataforma de Aprendizaje Matemático",
@@ -29,17 +30,7 @@ export default function RootLayout({
                 <Link href="/" className="logo text-xl font-extrabold tracking-tight">
                   Emanuel<span className="text-[var(--accent)]">.P</span>
                 </Link>
-                <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold text-[var(--text-secondary)]">
-                  <Link href="/" className="text-[var(--accent)] border-b-2 border-[var(--accent)] pb-5 pt-5 hover:text-[var(--accent-hover)] transition-colors">
-                    Mis cursos
-                  </Link>
-                  <Link href="#" className="hover:text-[var(--text-primary)] transition-colors">
-                    Explorar
-                  </Link>
-                  <Link href="/comunidad" className="hover:text-[var(--text-primary)] transition-colors">
-                    Comunidad
-                  </Link>
-                </nav>
+                <HeaderNav />
               </div>
               <div className="flex items-center space-x-4">
                 <ThemeToggle />
