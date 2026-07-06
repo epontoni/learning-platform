@@ -442,7 +442,7 @@ export function ReadingLayoutClient({
         {/* Tab Content */}
         <div className="flex-1 overflow-hidden relative">
           {rightTab === 'content' ? (
-            <div className="h-full overflow-y-auto p-6 space-y-6">
+            <div key="content" className="h-full overflow-y-auto p-6 space-y-6">
               {/* Progress Summary Card like DigitalHouse */}
               <div className="bg-[var(--bg-primary)]/50 border border-[var(--glass-border)] p-4 rounded-xl flex items-center justify-between">
                 <div className="space-y-1">
@@ -470,32 +470,29 @@ export function ReadingLayoutClient({
                       <span className="text-xs font-bold text-[var(--text-secondary)] truncate max-w-[200px]">
                         {unit.title}
                       </span>
-                      <span className="text-[10px] font-semibold text-[var(--text-muted)]">
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-muted)] font-medium">
                         {unit.topics.length} temas
                       </span>
                     </div>
 
-                    <ul className="space-y-1.5 pl-1">
+                    <ul className="space-y-1">
                       {unit.topics.map(topic => {
-                        const isActive = unit.id === currentUnitId && topic.id === currentTopicId;
                         const isDone = progress[`${course.id}/${unit.id}/${topic.id}`]?.isCompleted || false;
-
+                        const isActive = currentUnitId === unit.id && currentTopicId === topic.id;
                         return (
                           <li key={topic.id}>
                             <Link
                               href={`/cursos/${course.id}/${unit.id}/${topic.id}`}
-                              className={`flex items-center space-x-2.5 p-2 rounded-xl text-xs font-semibold transition-all group ${
+                              className={`flex items-center space-x-2 p-2 rounded-xl text-xs font-medium transition-colors ${
                                 isActive
                                   ? 'bg-[var(--border)] text-[var(--accent)]'
-                                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-primary)] hover:text-[var(--text-primary)]'
+                                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-primary)]'
                               }`}
                             >
                               {isDone ? (
-                                <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+                                <CheckCircle className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
                               ) : (
-                                <div className="text-[var(--text-muted)] group-hover:text-[var(--accent)]">
-                                  {getTopicIcon(topic.id)}
-                                </div>
+                                getTopicIcon(topic.id)
                               )}
                               <span className="truncate">{topic.title}</span>
                             </Link>
@@ -508,7 +505,7 @@ export function ReadingLayoutClient({
               </div>
             </div>
           ) : (
-            <div className="h-full">
+            <div key="chat" className="h-full">
               <AITutorPanel contextContent={rawContent} />
             </div>
           )}

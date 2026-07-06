@@ -1,0 +1,12 @@
+{
+  "id": "unidad-1",
+  "title": "Unidad 1: Introducción",
+  "description": "Introducción al curso",
+  "topics": [
+    {
+      "id": "01-capitulo-1",
+      "title": "1.1 Capítulo 1",
+      "duration": "20 min"
+    }
+  ]
+}

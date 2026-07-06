@@ -1,0 +1,27 @@
+{
+  "id": "unidad-5",
+  "title": "Unidad 5: Conjuntos Abiertos",
+  "description": "Introducción a la topología y conjuntos abiertos",
+  "topics": [
+    {
+      "id": "01-abiertos-1",
+      "title": "5.1 Conjuntos Abiertos (1° Parte)",
+      "duration": "20 min"
+    },
+    {
+      "id": "02-abiertos-2",
+      "title": "5.2 Conjuntos Abiertos - 2° Parte",
+      "duration": "20 min"
+    },
+    {
+      "id": "03-abiertos-3",
+      "title": "5.3 Conjuntos Abiertos (3° parte)",
+      "duration": "20 min"
+    },
+    {
+      "id": "04-abiertos-4",
+      "title": "5.4 Conjuntos Abiertos (4° Parte)",
+      "duration": "20 min"
+    }
+  ]
+}

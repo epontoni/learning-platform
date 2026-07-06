@@ -43,5 +43,14 @@
     "difficulty": "Principiante",
     "active": false,
     "entryPoint": "/cursos/numeros/unidad-1/01-modular"
+  },
+  {
+    "id": "del-analisis-a-la-topologia",
+    "title": "Del Análisis a la Topología",
+    "description": "Un viaje desde los conceptos fundamentales del análisis matemático hasta las bases de la topología general.",
+    "category": "Topología",
+    "difficulty": "Avanzado",
+    "active": true,
+    "entryPoint": "/cursos/del-analisis-a-la-topologia/unidad-1/01-capitulo-1"
   }
 ]
