@@ -1,0 +1,25 @@
+# Permutaciones Pares e Impares
+
+Cualquier permutación puede reducirse a su nivel atómico descomponiéndola en ciclos de longitud 2, conocidos como **transposiciones**. Una transposición $(i, j)$ es la operación más simple posible: intercambiar dos elementos y dejar el resto intacto.
+
+## Descomposición en Transposiciones
+
+Resulta que cualquier ciclo (y por consiguiente, cualquier permutación) puede escribirse como el producto de transposiciones. Por ejemplo:
+<div className="text-center font-semibold my-4 px-4">
+  $(1, 2, 3, 4) = (1, 4)(1, 3)(1, 2)$
+</div>
+
+Es importante notar que esta descomposición **no es única**, ni siquiera en la cantidad de transposiciones utilizadas. Sin embargo, existe un invariante matemático profundo asociado a esta descomposición.
+
+## Paridad de una Permutación
+
+Un teorema fundamental establece que:
+<div className="text-center font-semibold my-4 px-4">
+  Sin importar cómo descompongamos una permutación en transposiciones, el número total de transposiciones será siempre par, o siempre será impar.
+</div>
+
+Por lo tanto, podemos clasificar inequívocamente todas las permutaciones en dos bandos:
+- **Permutaciones Pares:** Aquellas que pueden escribirse como un número par de transposiciones.
+- **Permutaciones Impares:** Aquellas que requieren un número impar de transposiciones.
+
+La función que asigna $+1$ a las permutaciones pares y $-1$ a las impares es de hecho un homomorfismo de grupos: el producto de dos pares es par, dos impares dan lugar a una par, y una par por una impar produce una impar (exactamente como la suma de enteros).

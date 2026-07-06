@@ -24,6 +24,51 @@
           "title": "1.4 Algunas palabras de advertencia"
         }
       ]
+    },
+    {
+      "id": "unidad-2",
+      "title": "Unidad 2: Grupos",
+      "topics": [
+        { "id": "01-motivacion", "title": "2.1 Motivación" },
+        { "id": "02-definicion-propiedades-elementales", "title": "2.2 Definición y propiedades elementales" },
+        { "id": "03-grupos-finitos-tablas", "title": "2.3 Grupos finitos y tablas de grupo" }
+      ]
+    },
+    {
+      "id": "unidad-3",
+      "title": "Unidad 3: Subgrupos",
+      "topics": [
+        { "id": "01-notacion-terminologia", "title": "3.1 Notación y terminología" },
+        { "id": "02-subconjuntos-subgrupos", "title": "3.2 Subconjuntos y subgrupos" },
+        { "id": "03-subgrupos-ciclicos", "title": "3.3 Subgrupos cíclicos" }
+      ]
+    },
+    {
+      "id": "unidad-4",
+      "title": "Unidad 4: Permutaciones I",
+      "topics": [
+        { "id": "01-funciones-permutaciones", "title": "4.1 Funciones y permutaciones" },
+        { "id": "02-grupos-permutaciones", "title": "4.2 Grupos de permutaciones" },
+        { "id": "03-dos-ejemplos-importantes", "title": "4.3 Dos ejemplos importantes" }
+      ]
+    },
+    {
+      "id": "unidad-5",
+      "title": "Unidad 5: Permutaciones II",
+      "topics": [
+        { "id": "01-ciclos-notacion-ciclica", "title": "5.1 Ciclos y notación cíclica" },
+        { "id": "02-permutaciones-pares-impares", "title": "5.2 Permutaciones pares e impares" },
+        { "id": "03-grupos-alternantes", "title": "5.3 Grupos alternantes" }
+      ]
+    },
+    {
+      "id": "unidad-6",
+      "title": "Unidad 6: Grupos cíclicos",
+      "topics": [
+        { "id": "01-propiedades-elementales", "title": "6.1 Propiedades elementales" },
+        { "id": "02-clasificacion-grupos-ciclicos", "title": "6.2 Clasificación de grupos cíclicos" },
+        { "id": "03-subgrupos-grupos-ciclicos-finitos", "title": "6.3 Subgrupos de grupos cíclicos finitos" }
+      ]
     }
   ]
 }

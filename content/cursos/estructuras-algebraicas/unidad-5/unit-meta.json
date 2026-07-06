@@ -1,0 +1,10 @@
+{
+  "id": "unidad-5",
+  "title": "Unidad 5: Permutaciones II",
+  "description": "Estudio de Permutaciones II",
+  "topics": [
+    { "id": "01-ciclos-notacion-ciclica", "title": "5.1 Ciclos y notación cíclica", "duration": "15 min" },
+    { "id": "02-permutaciones-pares-impares", "title": "5.2 Permutaciones pares e impares", "duration": "15 min" },
+    { "id": "03-grupos-alternantes", "title": "5.3 Grupos alternantes", "duration": "15 min" }
+  ]
+}

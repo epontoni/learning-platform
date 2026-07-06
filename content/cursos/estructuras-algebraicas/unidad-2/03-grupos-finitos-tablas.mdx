@@ -1,0 +1,47 @@
+# Grupos Finitos y Tablas de Grupo
+
+Cuando un grupo $G$ tiene un número finito de elementos, decimos que es un **grupo finito**. El número de elementos se conoce como el **orden del grupo** y se denota habitualmente como $|G|$.
+
+## Tablas de Cayley
+
+Para grupos finitos con pocos elementos, podemos representar la operación binaria mediante una tabla de doble entrada conocida como **Tabla de Cayley** o tabla de grupo.
+
+<div align="center" className="my-6">
+  <table className="border-collapse border border-slate-400 dark:border-slate-600">
+    <thead>
+      <tr>
+        <th className="border border-slate-400 dark:border-slate-600 p-2">$*$</th>
+        <th className="border border-slate-400 dark:border-slate-600 p-2">$e$</th>
+        <th className="border border-slate-400 dark:border-slate-600 p-2">$a$</th>
+        <th className="border border-slate-400 dark:border-slate-600 p-2">$b$</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="border border-slate-400 dark:border-slate-600 p-2 font-bold">$e$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$e$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$a$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$b$</td>
+      </tr>
+      <tr>
+        <td className="border border-slate-400 dark:border-slate-600 p-2 font-bold">$a$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$a$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$b$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$e$</td>
+      </tr>
+      <tr>
+        <td className="border border-slate-400 dark:border-slate-600 p-2 font-bold">$b$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$b$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$e$</td>
+        <td className="border border-slate-400 dark:border-slate-600 p-2">$a$</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Propiedades de la Tabla de Grupo (Propiedad del Sudoku)
+
+Una característica fundamental de la tabla de Cayley de cualquier grupo es que **cada elemento del grupo aparece exactamente una vez en cada fila y en cada columna**. Esta propiedad se deriva directamente de las leyes de cancelación de los grupos. Además:
+
+- La simetría respecto a la diagonal principal indica que el grupo es **abeliano** (conmutativo).
+- La fila y columna correspondientes a la identidad $e$ son copias idénticas del encabezado y margen izquierdo, respectivamente.

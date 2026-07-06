@@ -1,0 +1,22 @@
+# Ciclos y Notación Cíclica
+
+Aunque la notación matricial de dos filas es clara para definir permutaciones, resulta poco práctica al operar. Una notación mucho más compacta y reveladora es la **notación de ciclos**.
+
+Un ciclo es una permutación que desplaza una secuencia de elementos cíclicamente y deja fijos al resto. Se denota listando los elementos alterados entre paréntesis:
+<div className="text-center font-semibold my-4 px-4">
+  $(a_1, a_2, \dots, a_k)$
+</div>
+Esto significa que $a_1$ se mapea a $a_2$, $a_2$ a $a_3$, ..., y $a_k$ regresa a $a_1$. El número $k$ se conoce como la **longitud del ciclo**.
+
+## Ciclos Disjuntos
+
+Dos ciclos son disjuntos si no comparten elementos en sus respectivas listas. Una de las propiedades algebraicas más maravillosas de los ciclos disjuntos es que **conmutan**. Si $\alpha$ y $\beta$ son ciclos disjuntos, entonces $\alpha\beta = \beta\alpha$.
+
+## Descomposición en Ciclos
+
+El teorema fundamental estructural de $S_n$ establece que:
+<div className="text-center font-semibold my-4 px-4">
+  Toda permutación en $S_n$ puede escribirse como un producto de ciclos disjuntos, y esta representación es única salvo por el orden de los ciclos.
+</div>
+
+Esta descomposición es fundamental porque el orden (el período) de cualquier permutación es simplemente el Mínimo Común Múltiplo (MCM) de las longitudes de sus ciclos disjuntos.

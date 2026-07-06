@@ -1,0 +1,15 @@
+# Orientación de Superficies
+
+Una noción importante global y geométrica de una superficie es su orientabilidad, intuitivamente asociada con la posibilidad de definir consistentemente qué lado de la superficie es el "adentro" y cuál es el "afuera".
+
+En cada punto $p$ de una superficie regular $S$, existen dos posibles vectores normales unitarios (perpendiculares al plano tangente $T_pS$). Si usamos una parametrización local $\mathbf{x}(u,v)$, una elección natural para el vector normal es:
+
+<div align="center">
+
+$$ N(p) = \frac{\mathbf{x}_u \times \mathbf{x}_v}{\|\mathbf{x}_u \times \mathbf{x}_v\|} $$
+
+</div>
+
+Una superficie se denomina **orientable** si es posible elegir un campo de vectores normales $N(p)$ que varíe de manera **continua** sobre toda la superficie $S$. Esta elección constituye una orientación para $S$.
+
+Existen superficies célebres, como la **Cinta de Möbius** o la **Botella de Klein**, sobre las cuales no es posible realizar tal elección global continua de un vector normal. Si intentamos desplazar un vector normal a lo largo del bucle de la cinta de Möbius, al regresar al punto de inicio, el vector estará apuntando en la dirección opuesta, lo que demuestra que es una superficie no orientable.

@@ -1,20 +1,113 @@
 # Curvas Regulares y Longitud de Arco
 
+Antes de comenzar esta sección, les presento esta clase donde daremos algunas palabras sobre diferenciabilidad, suavidad, vector tangente y regularidad.
+
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/pw4x0daV1rY" 
+    title="¿Por qué el Folium de Descartes NO es homeomorfo a una recta?"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
 Una curva parametrizada diferenciable $\alpha: I \to \mathbb{R}^3$ se dice que es **regular** si su vector velocidad no se anula en ningún punto del intervalo:
+
+<div align="center">
 
 $$\alpha'(t) \neq \vec{0} \quad \forall t \in I$$
 
+</div>
+
 La regularidad asegura la existencia geométrica de una recta tangente bien definida en cada punto de la traza.
+
+Tal como vimos en el video, la condición de *regularidad* ($\alpha'(t) \neq 0$) no se exige porque sin ella nunca exista una recta tangente, sino porque garantiza que toda la teoría diferencial funcione de manera uniforme y sin excepciones.
+
+Si $\alpha'(t) \neq 0$, entonces:
+
+- El vector tangente está dado directamente por $\alpha'(t)$;
+- La dirección tangente está bien definida y no es necesario recurrir a un estudio de límites;
+- Localmente, la curva se comporta como un arco suave, sin detenerse.
+
+En cambio, cuando $\alpha'(t) = 0$, la derivada deja de proporcionar información sobre la dirección de la curva. En ese caso pueden ocurrir distintas situaciones:
+
+1. **La recta tangente existe.** Por ejemplo,
+<div align="center">
+
+   $$ \alpha(t) = (t^2, t^3), $$
+
+</div>
+   donde
+<div align="center">
+
+   $$ \alpha'(0) = (0, 0), $$
+
+</div>
+   pero el límite de las direcciones de las secantes existe y determina una única recta tangente, que resulta ser
+<div align="center">
+
+   $$ y = 0. $$
+
+</div>
+
+2. **La recta tangente no existe**, porque las direcciones de las secantes no convergen a un único vector límite.
+
+3. **Pueden aparecer singularidades**, como cúspides, puntos de retroceso o múltiples tangentes, que requieren un análisis particular.
+
+Por esta razón, la regularidad se adopta como hipótesis básica en la geometría diferencial. No porque sea una condición necesaria para la existencia de la recta tangente, sino porque es una condición suficiente que garantiza que:
+
+<div align="center">
+
+$$ \boxed{\text{la recta tangente existe y su dirección viene dada por } \alpha'(t).} $$
+
+</div>
+
+En resumen,
+
+<div align="center">
+
+$$ \alpha'(t) \neq 0 \quad\Longrightarrow\quad \text{la dirección tangente está bien definida.} $$
+
+</div>
+
+Sin embargo, el recíproco es falso: existen curvas para las cuales
+
+<div align="center">
+
+$$ \alpha'(t) = 0 $$
+
+</div>
+
+y, aun así, la recta tangente existe. El ejemplo clásico es
+
+<div align="center">
+
+$$ \alpha(t) = (t^2, t^3), $$
+
+</div>
+
+donde la tangente en el origen se obtiene estudiando el límite de las rectas secantes y no a partir de la derivada.
+
+Ahora estudiaremos una propiedad asociada a la geometría de una curva: su longitud.
 
 ## Longitud de Arco
 
 La longitud de arco de una curva regular entre dos instantes $a$ y $b$ se define como la integral de la rapidez:
 
+<div align="center">
+
 $$s = \int_{a}^{b} \|\alpha'(t)\| \, dt$$
+
+</div>
 
 Toda curva regular admite una reparametrización por longitud de arco $s$, bajo la cual el vector velocidad tiene norma unitaria constante:
 
+<div align="center">
+
 $$\left\|\frac{d\alpha}{ds}\right\| = 1$$
+
+</div>
 
 ---
 

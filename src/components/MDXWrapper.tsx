@@ -4,6 +4,8 @@ import rehypeKatex from 'rehype-katex';
 import { QuizMultipleChoice } from '@/components/QuizMultipleChoice';
 import { SemanticEval } from '@/components/SemanticEval';
 import { GeoGebra } from '@/components/GeoGebra';
+import Mermaid from '@/components/Mermaid'
+import React from 'react';
 
 interface MDXWrapperProps {
   source: string;
@@ -62,12 +64,27 @@ const components = {
       {...props}
     />
   ),
-  pre: (props: any) => (
-    <pre
-      className="bg-slate-950 text-slate-200 p-4 rounded-xl overflow-x-auto my-4 font-mono text-sm border border-slate-900"
-      {...props}
-    />
-  ),
+  pre: (props: any) => {
+    const children = props.children;
+
+    // Verificamos si el contenido dentro del <pre> es un código de Mermaid
+    if (
+      React.isValidElement<{ className?: string; children?: React.ReactNode }>(children) &&
+      children.props.className === 'language-mermaid'
+    ) {
+      // Extraemos el texto puro del gráfico y lo pasamos al componente
+      const chartCode = children.props.children;
+      return <Mermaid chart={chartCode as string} />;
+    }
+
+    // Si es un bloque de código normal (javascript, python, etc.), usamos tu estilo por defecto
+    return (
+      <pre
+        className="bg-slate-950 text-slate-200 p-4 rounded-xl overflow-x-auto my-4 font-mono text-sm border border-slate-900"
+        {...props}
+      />
+    );
+  },
   hr: (props: any) => (
     <hr className="border-slate-200 dark:border-slate-800 my-8" {...props} />
   ),
@@ -88,6 +105,16 @@ const components = {
       {...props}
     />
   ),
+  img: (props: any) => (
+    <span className="my-8 flex flex-col items-center justify-center">
+      <img className="rounded-lg max-w-full h-auto bg-white dark:bg-slate-50" {...props} />
+      {props.alt && (
+        <span className="text-sm text-slate-500 dark:text-slate-400 mt-3 italic text-center">
+          {props.alt}
+        </span>
+      )}
+    </span>
+  ),
 };
 
 export async function MDXWrapper({ source }: MDXWrapperProps) {
@@ -96,6 +123,8 @@ export async function MDXWrapper({ source }: MDXWrapperProps) {
       <MDXRemote
         source={source}
         options={{
+          parseFrontmatter: true,
+          blockJS: false,
           mdxOptions: {
             remarkPlugins: [remarkMath],
             rehypePlugins: [rehypeKatex],

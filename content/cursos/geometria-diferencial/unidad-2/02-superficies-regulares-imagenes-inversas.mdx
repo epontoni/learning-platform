@@ -1,0 +1,25 @@
+# Superficies Regulares e Imágenes Inversas de Valores Regulares
+
+Para realizar cálculo diferencial sobre una superficie, necesitamos asegurar que sea "suave" en cada uno de sus puntos, sin picos ni aristas. 
+
+## Definición de Superficie Regular
+
+Un subconjunto $S \subset \mathbb{R}^3$ es una **superficie regular** si para cada punto $p \in S$ existe un entorno $V \subset \mathbb{R}^3$ y una aplicación $\mathbf{x}: U \to V \cap S$ de un abierto $U \subset \mathbb{R}^2$ sobre $V \cap S$ tal que:
+
+1. $\mathbf{x}$ es diferenciable de clase $C^\infty$.
+2. $\mathbf{x}$ es un homeomorfismo (biyectiva y con inversa continua).
+3. (Condición de regularidad): Para cada $q \in U$, el diferencial $d\mathbf{x}_q: \mathbb{R}^2 \to \mathbb{R}^3$ es inyectivo.
+
+La aplicación $\mathbf{x}$ se denomina **parametrización** o **sistema de coordenadas locales**.
+
+## Imágenes Inversas de Valores Regulares
+
+Frecuentemente, las superficies se definen de manera implícita como el conjunto de ceros de una función. El teorema del valor regular nos da un criterio poderoso para determinar si un conjunto así definido es una superficie regular.
+
+Sea $f: U \subset \mathbb{R}^3 \to \mathbb{R}$ una función diferenciable. Un valor $a \in f(U)$ es un **valor regular** si el gradiente $\nabla f(p) \neq \vec{0}$ para todo punto $p \in f^{-1}(a)$.
+
+<div className="text-center font-semibold my-6 px-4">
+  Si $a$ es un valor regular de $f$, entonces $f^{-1}(a)$ es una superficie regular en $\mathbb{R}^3$.
+</div>
+
+Por ejemplo, consideremos la esfera unitaria: $x^2 + y^2 + z^2 = 1$. Si tomamos $f(x,y,z) = x^2 + y^2 + z^2$, entonces $\nabla f = (2x, 2y, 2z)$. Este gradiente solo se anula en el origen $(0,0,0)$, el cual no está en $f^{-1}(1)$. Por tanto, $1$ es un valor regular, lo que demuestra inmediatamente que la esfera es una superficie regular.

@@ -1,0 +1,19 @@
+# Subgrupos Cíclicos
+
+Entre los subgrupos más simples y fundamentales se encuentran aquellos generados por un único elemento del grupo.
+
+Dado un elemento $a$ de un grupo $G$, consideramos el conjunto de todas las potencias enteras de $a$:
+
+<div className="text-center font-semibold my-4 px-4">
+  $\langle a \rangle = \{ a^n \mid n \in \mathbb{Z} \}$
+</div>
+
+Se puede demostrar fácilmente mediante la prueba de subgrupos que este conjunto es siempre un subgrupo de $G$. Lo denominamos el **subgrupo cíclico generado por $a$**.
+
+## Propiedades de los Subgrupos Cíclicos
+
+1. **Minimidad:** $\langle a \rangle$ es el subgrupo más pequeño de $G$ que contiene al elemento $a$. Cualquier otro subgrupo de $G$ que contenga a $a$ necesariamente deberá contener todas las potencias de $a$ por cerradura, y por lo tanto deberá contener a $\langle a \rangle$.
+2. **Abelianos:** Todo subgrupo cíclico es abeliano, independientemente de si el grupo original $G$ lo es, puesto que $a^n a^m = a^{n+m} = a^{m+n} = a^m a^n$.
+3. **Orden:** El tamaño del subgrupo cíclico $|\langle a \rangle|$ es exactamente igual al orden del elemento $|a|$. Si $a$ tiene orden finito $n$, entonces $\langle a \rangle = \{e, a, a^2, \dots, a^{n-1}\}$. Si el orden de $a$ es infinito, $\langle a \rangle$ es isomorfo a los números enteros bajo la suma.
+
+Si existe un elemento $g \in G$ tal que $\langle g \rangle = G$, decimos que el propio grupo $G$ es un **grupo cíclico** y que $g$ es su generador.

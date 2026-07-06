@@ -1,0 +1,10 @@
+{
+  "id": "unidad-6",
+  "title": "Unidad 6: Grupos cíclicos",
+  "description": "Estudio de Grupos cíclicos",
+  "topics": [
+    { "id": "01-propiedades-elementales", "title": "6.1 Propiedades elementales", "duration": "15 min" },
+    { "id": "02-clasificacion-grupos-ciclicos", "title": "6.2 Clasificación de grupos cíclicos", "duration": "15 min" },
+    { "id": "03-subgrupos-grupos-ciclicos-finitos", "title": "6.3 Subgrupos de grupos cíclicos finitos", "duration": "15 min" }
+  ]
+}

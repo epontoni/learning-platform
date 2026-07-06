@@ -1,0 +1,10 @@
+{
+  "id": "unidad-4",
+  "title": "Unidad 4: Permutaciones I",
+  "description": "Estudio de Permutaciones I",
+  "topics": [
+    { "id": "01-funciones-permutaciones", "title": "4.1 Funciones y permutaciones", "duration": "15 min" },
+    { "id": "02-grupos-permutaciones", "title": "4.2 Grupos de permutaciones", "duration": "15 min" },
+    { "id": "03-dos-ejemplos-importantes", "title": "4.3 Dos ejemplos importantes", "duration": "15 min" }
+  ]
+}

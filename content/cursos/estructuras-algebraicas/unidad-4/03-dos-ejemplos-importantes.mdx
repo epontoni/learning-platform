@@ -1,0 +1,22 @@
+# Dos Ejemplos Importantes
+
+Para solidificar los conceptos de los grupos de permutaciones, analizaremos dos ejemplos concretos de gran relevancia en el álgebra abstracta.
+
+## 1. El Grupo Simétrico $S_3$
+
+El grupo $S_3$ consta de todas las permutaciones de 3 elementos. Su orden es $3! = 6$. Es el grupo no abeliano más pequeño que existe. Podemos interpretar estas permutaciones como las simetrías de un triángulo equilátero.
+
+Los elementos típicos pueden escribirse matricialmente, donde la fila superior es el conjunto original y la fila inferior el destino. Por ejemplo, una rotación de los elementos podría ser:
+<div className="text-center font-semibold my-4 px-4">
+  $\rho = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 3 & 1 \end{pmatrix}$
+</div>
+Esto significa que 1 va a 2, 2 va a 3 y 3 regresa a 1. Componiendo permutaciones como esta se genera toda la tabla del grupo $S_3$.
+
+## 2. El Grupo Diédrico $D_4$
+
+El grupo de simetrías de un cuadrado se conoce como $D_4$ (algunos autores lo llaman $D_8$ por tener orden 8). Consiste en las isometrías del plano que dejan inalterado un cuadrado regular:
+
+- 4 Rotaciones (incluyendo la rotación trivial o identidad de 0°).
+- 4 Reflexiones (dos respecto a las diagonales, dos respecto a los ejes bisectores).
+
+Curiosamente, podemos interpretar cada uno de estos movimientos geométricos como permutaciones de los 4 vértices del cuadrado. Por lo tanto, el grupo $D_4$ puede visualizarse como un *subgrupo* propio del grupo simétrico $S_4$ (el cual tendría $4! = 24$ elementos). Esto ejemplifica el **Teorema de Cayley**, que establece que todo grupo finito es isomorfo a un subgrupo de un grupo simétrico.

@@ -28,7 +28,7 @@ export function QuizMultipleChoice({
   }
   const { courseId, unitId, topicId } = useMDXContext();
   const { getTopicProgress, updateQuizScore, markCompleted } = useProgress();
-  
+
   const [selectedIdx, setSelectedIdx] = React.useState<number | null>(null);
   const [submitted, setSubmitted] = React.useState(false);
 

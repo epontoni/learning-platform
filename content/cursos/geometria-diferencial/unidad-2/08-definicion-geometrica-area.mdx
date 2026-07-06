@@ -1,0 +1,27 @@
+# Una Definición Geométrica de Área
+
+Anteriormente introdujimos una expresión para el cálculo del área utilizando la primera forma fundamental. Sin embargo, en geometría diferencial resulta importante contar con una definición geométrica más intrínseca e independiente de la parametrización que utilizamos.
+
+## El Concepto de Formas Diferenciales y Elemento de Área
+
+Si $S$ es una superficie orientable, podemos elegir un campo normal unitario continuo $N$. Definimos el elemento de área geométrico, comúnmente denotado como $dA$ o $d\sigma$, de modo que el área de una región $R$ se exprese como la integral superficial directa:
+
+<div align="center">
+
+$$ \text{Área}(R) = \iint_R dA $$
+
+</div>
+
+Desde una perspectiva analítica, este elemento puede entenderse a través de determinantes jacobianos y formas diferenciales o recurriendo al vector producto vectorial $\mathbf{x}_u \times \mathbf{x}_v$ en coordenadas locales. La clave reside en que, para que el área esté bien definida geométricamente en regiones que requieran más de una carta local, la integral obtenida no debe cambiar al hacer un difeomorfismo para cambiar los parámetros (lo cual garantiza el Teorema del Cambio de Variable en integrales múltiples).
+
+## Interpretación Local
+
+Intuitivamente, si analizamos un minúsculo paralelogramo formado por los vectores tangenciales $\mathbf{x}_u du$ y $\mathbf{x}_v dv$ en el plano tangente, su área geométrica pura en el espacio de $\mathbb{R}^3$ es precisamente la magnitud del producto cruz:
+
+<div align="center">
+
+$$ dA = \|\mathbf{x}_u \times \mathbf{x}_v\| \, du \, dv $$
+
+</div>
+
+Al integrar todos estos elementos infinitesimales tangentes sobre la región en el espacio de los parámetros, recuperamos el área total de la porción correspondiente de la superficie.

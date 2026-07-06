@@ -1,0 +1,21 @@
+# Grupos Alternantes
+
+La clasificación de permutaciones por su paridad nos conduce de forma natural a la formación de un subgrupo crucial dentro del grupo simétrico.
+
+## El Grupo Alternante $A_n$
+
+El conjunto de todas las **permutaciones pares** en $S_n$ forma un subgrupo llamado el **Grupo Alternante de grado $n$**, denotado como $A_n$.
+
+¿Por qué es un subgrupo?
+- El producto de dos permutaciones pares es par.
+- La identidad es una permutación par (cero transposiciones).
+- El inverso de una permutación par requiere exactamente las mismas transposiciones pero en orden inverso, por lo que sigue siendo par.
+
+## Orden y Significado de $A_n$
+
+Aproximadamente la mitad de todas las permutaciones de $S_n$ son pares y la otra mitad son impares. Esto implica que el orden del grupo alternante es exactamente la mitad del grupo simétrico:
+<div className="text-center font-semibold my-4 px-4">
+  $|A_n| = \frac{n!}{2}$
+</div>
+
+Los grupos alternantes, específicamente para $n \geq 5$, desempeñan un papel estelar en la teoría de Galois. El hecho de que $A_5$ sea un grupo **simple** (un grupo que no tiene subgrupos normales propios no triviales) es la razón estructural profunda por la cual es imposible resolver una ecuación polinómica general de quinto grado usando una fórmula algebraica clásica con radicales.

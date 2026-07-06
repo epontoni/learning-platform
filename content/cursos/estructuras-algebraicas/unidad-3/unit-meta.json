@@ -1,0 +1,10 @@
+{
+  "id": "unidad-3",
+  "title": "Unidad 3: Subgrupos",
+  "description": "Estudio de Subgrupos",
+  "topics": [
+    { "id": "01-notacion-terminologia", "title": "3.1 Notación y terminología", "duration": "15 min" },
+    { "id": "02-subconjuntos-subgrupos", "title": "3.2 Subconjuntos y subgrupos", "duration": "15 min" },
+    { "id": "03-subgrupos-ciclicos", "title": "3.3 Subgrupos cíclicos", "duration": "15 min" }
+  ]
+}

@@ -1,0 +1,24 @@
+# Subconjuntos y Subgrupos
+
+En álgebra abstracta, con frecuencia encontramos estructuras grandes que contienen estructuras más pequeñas idénticas en su comportamiento interno.
+
+Un subconjunto no vacío $H$ de un grupo $G$ se denomina **subgrupo** de $G$ si $H$ es en sí mismo un grupo bajo la *misma operación* definida en $G$. Cuando $H$ es subgrupo de $G$, lo denotamos como $H \leq G$. Si además $H \neq G$, decimos que es un subgrupo propio ($H < G$).
+
+## Pruebas de Subgrupos
+
+Para verificar si un subconjunto $H \subset G$ es un subgrupo, no necesitamos comprobar los cuatro axiomas de grupo desde cero, ya que la asociatividad se hereda automáticamente de $G$. Basta con emplear uno de los siguientes criterios:
+
+### Prueba de dos pasos
+Un subconjunto no vacío $H \subseteq G$ es un subgrupo si satisface:
+1. **Cerradura bajo la operación:** Si $a, b \in H$, entonces $ab \in H$.
+2. **Cerradura bajo inversos:** Si $a \in H$, entonces $a^{-1} \in H$.
+
+### Prueba de un solo paso
+Una formulación aún más compacta establece que un subconjunto no vacío $H \subseteq G$ es un subgrupo si y solo si:
+
+<div className="text-center font-semibold my-4 px-4">
+  Para todo par de elementos $a, b \in H$, se cumple que $ab^{-1} \in H$.
+</div>
+
+### Prueba para subconjuntos finitos
+Si sabemos de antemano que $H$ es finito, la prueba se simplifica drásticamente: un subconjunto finito no vacío $H$ cerrado bajo la operación del grupo es siempre un subgrupo (no hace falta probar explícitamente los inversos).

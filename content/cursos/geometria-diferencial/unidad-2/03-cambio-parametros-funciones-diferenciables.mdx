@@ -1,0 +1,29 @@
+# Cambio de Parámetros y Funciones Diferenciables sobre una Superficie
+
+Una de las ideas centrales en geometría diferencial es que las propiedades geométricas de una superficie no deben depender de la parametrización específica que escojamos para describirla.
+
+## Cambio de Parámetros
+
+Si tenemos un punto $p \in S$ que pertenece a dos entornos coordenados distintos, dados por parametrizaciones $\mathbf{x}: U \to S$ y $\mathbf{y}: V \to S$, entonces la transición entre estas coordenadas en la región de solapamiento $W = \mathbf{x}(U) \cap \mathbf{y}(V)$ está regida por la función de cambio de parámetros:
+
+<div align="center">
+
+$$ h = \mathbf{x}^{-1} \circ \mathbf{y} : \mathbf{y}^{-1}(W) \to \mathbf{x}^{-1}(W) $$
+
+</div>
+
+Un teorema fundamental establece que todo cambio de parámetros $h$ entre dos parametrizaciones de una superficie regular es un **difeomorfismo** (una biyección diferenciable con inversa diferenciable).
+
+## Funciones Diferenciables sobre Superficies
+
+Con el cambio de parámetros bien comportado, podemos definir qué significa que una función definida sobre una superficie sea diferenciable.
+
+Una función $f: S \to \mathbb{R}$ definida en una superficie regular $S$ es **diferenciable** en un punto $p \in S$ si, dada cualquier parametrización $\mathbf{x}: U \to S$ con $p \in \mathbf{x}(U)$, la función compuesta
+
+<div align="center">
+
+$$ f \circ \mathbf{x} : U \subset \mathbb{R}^2 \to \mathbb{R} $$
+
+</div>
+
+es diferenciable ordinariamente en $\mathbb{R}^2$. Como el cambio de parámetros es un difeomorfismo, si $f \circ \mathbf{x}$ es diferenciable, entonces $f \circ \mathbf{y}$ también lo será para cualquier otra parametrización $\mathbf{y}$. ¡La noción de diferenciabilidad está bien definida y es intrínseca a la superficie!

@@ -36,6 +36,44 @@
           "title": "1.7 Propiedades globales de curvas planas"
         }
       ]
+    },
+    {
+      "id": "unidad-2",
+      "title": "Unidad 2: Superficies Regulares",
+      "topics": [
+        {
+          "id": "01-introduccion",
+          "title": "2.1 Introducción"
+        },
+        {
+          "id": "02-superficies-regulares-imagenes-inversas",
+          "title": "2.2 Superficies regulares; Imágenes inversas de valores regulares"
+        },
+        {
+          "id": "03-cambio-parametros-funciones-diferenciables",
+          "title": "2.3 Cambio de parámetros; Funciones diferenciables sobre una superficie"
+        },
+        {
+          "id": "04-plano-tangente-diferencial",
+          "title": "2.4 El plano tangente; La diferencial de una aplicación"
+        },
+        {
+          "id": "05-primera-forma-fundamental-area",
+          "title": "2.5 La primera forma fundamental; Área"
+        },
+        {
+          "id": "06-orientacion-superficies",
+          "title": "2.6 Orientación de superficies"
+        },
+        {
+          "id": "07-caracterizacion-superficies-compactas-orientables",
+          "title": "2.7 Una caracterización de superficies compactas orientables"
+        },
+        {
+          "id": "08-definicion-geometrica-area",
+          "title": "2.8 Una definición geométrica de área"
+        }
+      ]
     }
   ]
 }

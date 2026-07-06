@@ -1,0 +1,20 @@
+# Funciones y Permutaciones
+
+Antes de adentrarnos en los grupos de permutaciones, es vital repasar el concepto de función y sus propiedades fundamentales.
+
+## Inyectividad, Sobreyectividad y Biyección
+
+Sea $f: A \to B$ una función entre dos conjuntos.
+- **Inyectiva (uno a uno):** Si elementos distintos del dominio tienen imágenes distintas. Formalmente, $f(x) = f(y) \implies x = y$.
+- **Sobreyectiva (sobre):** Si la imagen de la función cubre todo el codominio. Es decir, para todo $b \in B$, existe al menos un $a \in A$ tal que $f(a) = b$.
+- **Biyectiva:** Una función es biyectiva si es tanto inyectiva como sobreyectiva. Esto garantiza que la función empareja perfectamente cada elemento de $A$ con exactamente un elemento de $B$, permitiendo la existencia de una función inversa $f^{-1}: B \to A$.
+
+## Permutaciones
+
+En el contexto de álgebra, una **permutación** de un conjunto $A$ no es más que una función biyectiva desde $A$ hacia sí mismo. 
+
+<div className="text-center font-semibold my-4 px-4">
+  Una permutación $\sigma$ es una biyección $\sigma: A \to A$.
+</div>
+
+Para conjuntos finitos, como $A = \{1, 2, 3, \dots, n\}$, una permutación es un simple reordenamiento de estos números. Las permutaciones son las "simetrías" más generales que se pueden realizar sobre un conjunto discreto donde los elementos no tienen una estructura geométrica preconcebida.

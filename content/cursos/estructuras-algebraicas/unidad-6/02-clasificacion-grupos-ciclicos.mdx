@@ -1,0 +1,14 @@
+# Clasificación de Grupos Cíclicos
+
+Para comprender los grupos cíclicos en su totalidad, debemos explorar la relación entre los elementos y los generadores. Un grupo cíclico a menudo tiene más de un generador válido.
+
+## Generadores Múltiples
+
+Si tenemos un grupo cíclico finito $G = \langle a \rangle$ de orden $n$, entonces el elemento $a^k$ generará el grupo completo si y solo si el máximo común divisor de $k$ y $n$ es igual a 1 (es decir, $k$ y $n$ son **coprimos**).
+<div className="text-center font-semibold my-4 px-4">
+  $\langle a^k \rangle = G \iff \gcd(k, n) = 1$
+</div>
+
+Esto implica que el número total de generadores distintos que tiene un grupo cíclico de orden $n$ es igual a $\phi(n)$, donde $\phi$ es la Función Totiente de Euler (la cantidad de enteros menores que $n$ y coprimos con $n$).
+
+En el caso de un grupo cíclico infinito como $\mathbb{Z}$, los únicos generadores posibles son $1$ y $-1$.

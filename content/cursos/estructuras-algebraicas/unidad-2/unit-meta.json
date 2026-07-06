@@ -1,0 +1,10 @@
+{
+  "id": "unidad-2",
+  "title": "Unidad 2: Grupos",
+  "description": "Estudio de Grupos",
+  "topics": [
+    { "id": "01-motivacion", "title": "2.1 Motivación", "duration": "15 min" },
+    { "id": "02-definicion-propiedades-elementales", "title": "2.2 Definición y propiedades elementales", "duration": "15 min" },
+    { "id": "03-grupos-finitos-tablas", "title": "2.3 Grupos finitos y tablas de grupo", "duration": "15 min" }
+  ]
+}

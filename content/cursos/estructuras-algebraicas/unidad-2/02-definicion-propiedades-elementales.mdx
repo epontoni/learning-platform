@@ -1,0 +1,20 @@
+# Definición y Propiedades Elementales
+
+Un **grupo** es un par ordenado $(G, *)$ formado por un conjunto no vacío $G$ y una operación binaria $*$ definida sobre $G$, que satisface los siguientes axiomas:
+
+1. **Cerradura:** Para todo $a, b \in G$, se tiene que $a * b \in G$.
+2. **Asociatividad:** Para todo $a, b, c \in G$, se cumple que $(a * b) * c = a * (b * c)$.
+3. **Elemento neutro (identidad):** Existe un elemento $e \in G$ tal que para todo $a \in G$, $a * e = e * a = a$.
+4. **Elemento inverso:** Para cada $a \in G$, existe un elemento $a^{-1} \in G$ tal que $a * a^{-1} = a^{-1} * a = e$.
+
+Si además se cumple la **conmutatividad** ($a * b = b * a$ para todo $a, b \in G$), el grupo se denomina **abeliano**.
+
+<div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 my-4">
+  <h3 className="font-semibold text-blue-800 dark:text-blue-300">Propiedades Elementales</h3>
+  <ul className="list-disc pl-5">
+    <li><strong>Unicidad del neutro:</strong> El elemento identidad $e$ es único en $G$.</li>
+    <li><strong>Unicidad del inverso:</strong> Para cada $a \in G$, su inverso $a^{-1}$ es único.</li>
+    <li><strong>Leyes de cancelación:</strong> Si $a * b = a * c$, entonces $b = c$. Análogamente, si $b * a = c * a$, entonces $b = c$.</li>
+    <li><strong>Inverso de un producto:</strong> $(a * b)^{-1} = b^{-1} * a^{-1}$.</li>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+# La Primera Forma Fundamental y Área
+
+Para medir longitudes, ángulos y áreas sobre una superficie, dotamos al plano tangente $T_pS$ del producto interno euclidiano heredado de $\mathbb{R}^3$.
+
+## La Primera Forma Fundamental
+
+La **primera forma fundamental** de una superficie regular $S$ en el punto $p$ es la forma cuadrática $I_p: T_pS \to \mathbb{R}$ dada por la restricción del producto interior estándar de $\mathbb{R}^3$ al plano tangente:
+
+<div align="center">
+
+$$ I_p(w) = \langle w, w \rangle = \|w\|^2 \quad \text{para todo } w \in T_pS $$
+
+</div>
+
+Dada una parametrización $\mathbf{x}(u,v)$, un vector genérico en el plano tangente se escribe como $w = w_1 \mathbf{x}_u + w_2 \mathbf{x}_v$. Usando esta base, la primera forma fundamental se puede expresar mediante los coeficientes $E, F, G$:
+
+<div align="center">
+
+$$ I_p(w_1 \mathbf{x}_u + w_2 \mathbf{x}_v) = E w_1^2 + 2F w_1 w_2 + G w_2^2 $$
+
+</div>
+
+donde las funciones componentes son:
+- $E = \langle \mathbf{x}_u, \mathbf{x}_u \rangle$
+- $F = \langle \mathbf{x}_u, \mathbf{x}_v \rangle$
+- $G = \langle \mathbf{x}_v, \mathbf{x}_v \rangle$
+
+Con la primera forma fundamental podemos calcular longitudes de curvas sobre la superficie e intersecciones de ángulos sin necesidad de salirnos del "mundo bidimensional" local de la superficie.
+
+## Área
+
+La primera forma fundamental también nos permite calcular áreas. El área de una región $R \subset S$ parametrizada por $\mathbf{x}: U \to R$ se define como:
+
+<div align="center">
+
+$$ \text{Área}(R) = \iint_U \|\mathbf{x}_u \times \mathbf{x}_v\| \, du \, dv = \iint_U \sqrt{EG - F^2} \, du \, dv $$
+
+</div>
+
+La expresión $\sqrt{EG - F^2}$ actúa como un factor de distorsión del área al mapear desde el plano $(u,v)$ a la superficie $S$.

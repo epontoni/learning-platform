@@ -1,0 +1,31 @@
+# El Plano Tangente y la Diferencial de una Aplicación
+
+Al igual que una curva regular tiene una recta tangente bien definida en cada punto, una superficie regular tiene un **plano tangente**.
+
+## El Plano Tangente
+
+Sea $S$ una superficie regular y $p \in S$. Consideremos todas las curvas parametrizadas diferenciables $\alpha: (-\epsilon, \epsilon) \to S$ que pasan por $p$, es decir, $\alpha(0) = p$.
+
+El conjunto de todos los vectores velocidad $\alpha'(0)$ de dichas curvas forma un subespacio vectorial de dimensión 2 en $\mathbb{R}^3$, denominado **plano tangente a $S$ en $p$**, denotado por $T_pS$.
+
+Si tenemos una parametrización $\mathbf{x}(u, v)$ de la superficie alrededor de $p$, una base natural para el plano tangente está dada por las derivadas parciales de la parametrización evaluadas en $p$:
+
+<div align="center">
+
+$$ T_pS = \text{span} \{ \mathbf{x}_u(p), \mathbf{x}_v(p) \} $$
+
+</div>
+
+donde $\mathbf{x}_u = \frac{\partial \mathbf{x}}{\partial u}$ y $\mathbf{x}_v = \frac{\partial \mathbf{x}}{\partial v}$.
+
+## La Diferencial de una Aplicación
+
+Dada una aplicación diferenciable $f: S_1 \to S_2$ entre dos superficies regulares y un punto $p \in S_1$, la **diferencial** de $f$ en $p$, denotada por $df_p$, es una transformación lineal entre los correspondientes planos tangentes:
+
+<div align="center">
+
+$$ df_p: T_pS_1 \to T_{f(p)}S_2 $$
+
+</div>
+
+La diferencial empuja (hace el push-forward) de los vectores tangentes: si $w \in T_pS_1$ es el vector velocidad de una curva $\alpha(t)$ en $S_1$, entonces $df_p(w)$ es el vector velocidad de la curva transformada $f(\alpha(t))$ en $S_2$.

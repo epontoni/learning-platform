@@ -1,0 +1,22 @@
+# Grupos de Permutaciones
+
+El estudio de las permutaciones es el origen histórico de la teoría de grupos. El conjunto de todas las permutaciones posibles de un conjunto $A$ forma una estructura algebraica excepcionalmente rica bajo la operación de composición de funciones.
+
+## El Grupo Simétrico $S_n$
+
+Sea $A = \{1, 2, 3, \dots, n\}$ un conjunto finito con $n$ elementos. El conjunto de todas las biyecciones (permutaciones) de $A$ hacia $A$ se denomina el **Grupo Simétrico de grado $n$**, y se denota como $S_n$.
+
+Demostremos que $S_n$ es en efecto un grupo:
+1. **Cerradura:** La composición de dos funciones biyectivas es siempre biyectiva, por lo que el producto de dos permutaciones pertenece a $S_n$.
+2. **Asociatividad:** La composición de funciones es siempre asociativa: $(f \circ g) \circ h = f \circ (g \circ h)$.
+3. **Identidad:** La función identidad $\iota(x) = x$ es una biyección, y actúa como el elemento neutro de la composición.
+4. **Inverso:** Dado que toda permutación es una biyección, posee una función inversa que también es una biyección y pertenece a $S_n$.
+
+## Orden de $S_n$
+
+El número de permutaciones posibles de $n$ elementos es $n$ factorial. Por lo tanto, el orden del grupo simétrico es:
+<div className="text-center font-semibold my-4 px-4">
+  $|S_n| = n! = n \times (n-1) \times \dots \times 1$
+</div>
+
+A diferencia de muchos grupos que hemos visto, el grupo simétrico $S_n$ **no es abeliano** para cualquier $n \geq 3$, puesto que el orden en que aplicamos dos transformaciones distintas suele cambiar el resultado final.
