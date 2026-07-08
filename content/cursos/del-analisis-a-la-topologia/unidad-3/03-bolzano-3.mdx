@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Se explora el concepto del Axioma del Supremo (Completitud de los números reales) y su rol indispensable para que el Teorema de Bolzano funcione. Se demuestra que si el dominio fueran los números racionales $\mathbb{Q}$, el teorema fallaría.
 
-**Resumen:** Se explora el concepto del Axioma del Supremo (Completitud de los números reales) y su rol indispensable para que el Teorema de Bolzano funcione. Se demuestra que si el dominio fueran los números racionales $\mathbb{Q}$, el teorema fallaría.\n
+---
+
+## Cuestionario de Completitud de los Reales
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Si definimos una función continua en el intervalo cerrado de racionales [a, b]_Q = { x ∈ Q | a <= x <= b }, ¿por qué el Teorema de Bolzano no se cumple en general?"
+  options={[
+    "Porque los números racionales Q carecen del Axioma de Completitud (tienen 'agujeros'), lo que permite que el punto donde la gráfica cruza el eje sea un número irracional.",
+    "Porque las funciones continuas sobre Q no pueden evaluarse en números negativos.",
+    "Porque en Q la longitud del intervalo mediante bisección no puede calcularse de forma finita.",
+    "Porque no se pueden definir entornos ni bolas abiertas sobre el conjunto de los racionales."
+  ]}
+  correctIndex={0}
+  explanation="Un ejemplo clásico es f(x) = x^2 - 2 en el intervalo [1, 2]_Q. Esta función es continua en los racionales, f(1) < 0 y f(2) > 0, pero su única raíz es √2, la cual no pertenece a Q. Por lo tanto, no existe ninguna raíz racional dentro del dominio."
+/>
+
+---
+
+## Evaluación del Fallo en los Racionales
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Desarrolla matemáticamente el ejemplo de la función $f(x) = x^2 - 2$ en el dominio racional $\mathbb{Q}$ para ilustrar el fallo del Teorema de Bolzano. Explica cómo la completitud de $\mathbb{R}$ resuelve esta inconsistencia."
+/>

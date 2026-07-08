@@ -6,22 +6,50 @@
     {
       "id": "01-abiertos-1",
       "title": "5.1 Conjuntos Abiertos (1° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "02-abiertos-2",
-      "title": "5.2 Conjuntos Abiertos - 2° Parte",
-      "duration": "20 min"
+      "title": "5.2 Conjuntos Abiertos (2° Parte)",
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "03-abiertos-3",
       "title": "5.3 Conjuntos Abiertos (3° parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "04-abiertos-4",
       "title": "5.4 Conjuntos Abiertos (4° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     }
   ]
 }

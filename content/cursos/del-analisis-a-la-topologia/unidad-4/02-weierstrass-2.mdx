@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Se discute la condición de acotación. ¿Qué sucede si el intervalo es cerrado pero no acotado (como $[0, \infty)$)? Se muestran contraejemplos donde la función crece indefinidamente y falla el teorema.
 
-**Resumen:** Se discute la condición de acotación. ¿Qué sucede si el intervalo es cerrado pero no acotado (como $[0, \infty)$)? Se muestran contraejemplos donde la función crece indefinidamente y falla el teorema.\n
+---
+
+## Cuestionario de Weierstrass y Acotación
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Si modificamos la hipótesis del dominio para que sea un intervalo cerrado pero no acotado, como [0, ∞), ¿por qué falla el Teorema de Weierstrass?"
+  options={[
+    "Porque la función puede crecer de manera ilimitada (tender a infinito) a medida que x crece, perdiendo la propiedad de acotación y de extremos alcanzados.",
+    "Porque las funciones continuas no pueden evaluarse en el punto cero.",
+    "Porque en un intervalo infinito es imposible construir sucesiones de puntos en el dominio.",
+    "Porque la derivada de cualquier función sobre [0, ∞) debe ser constante."
+  ]}
+  correctIndex={0}
+  explanation="Consideremos la función continua f(x) = x definida en [0, ∞). La función no está acotada superiormente y, por lo tanto, no alcanza ningún valor máximo absoluto en su dominio."
+/>
+
+---
+
+## Evaluación del Fallo en Dominios No Acotados
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Diseña un contraejemplo de una función continua en el intervalo cerrado y no acotado $[1, \infty)$ que esté acotada pero que no alcance su mínimo absoluto ni su máximo absoluto en dicho dominio. Explica tu razonamiento."
+/>

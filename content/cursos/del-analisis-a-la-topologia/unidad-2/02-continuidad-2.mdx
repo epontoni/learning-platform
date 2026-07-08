@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Profundizamos en la continuidad analizando qué ocurre con los puntos aislados frente a los puntos de acumulación. Se refuta el mito de la 'lápiz-continuidad' (poder dibujar sin levantar el lápiz) demostrando que es insuficiente para dominios disconexos, y se presentan funciones con comportamiento patológico.
 
-**Resumen:** Profundizamos en la continuidad analizando qué ocurre con los puntos aislados frente a los puntos de acumulación. Se refuta el mito de la 'lápiz-continuidad' (poder dibujar sin levantar el lápiz) demostrando que es insuficiente para dominios disconexos, y se presentan funciones con comportamiento patológico.\n
+---
+
+## Cuestionario de Continuidad y Dominios
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="¿Por qué la noción intuitiva de que una función es continua si y solo si se puede dibujar 'sin levantar el lápiz' falla formalmente?"
+  options={[
+    "Porque no tiene en cuenta la estructura topológica del dominio; por ejemplo, una función puede estar definida sobre un dominio disconexo o contener puntos aislados donde sigue siendo matemáticamente continua.",
+    "Porque el lápiz representa una línea de grosor infinito que no puede graficar conjuntos de medida cero.",
+    "Porque las funciones continuas solo pueden dibujarse utilizando ordenadores con alta precisión numérica.",
+    "Porque la definición matemática exige que toda función continua sea diferenciable casi en todo punto."
+  ]}
+  correctIndex={0}
+  explanation="El concepto físico de dibujar 'sin levantar el lápiz' asume que el dominio es un intervalo conexo de la recta real. En dominios con componentes disjuntas o puntos aislados, la definición rigurosa de continuidad se cumple formalmente aunque la gráfica esté fragmentada."
+/>
+
+---
+
+## Evaluación de Puntos Aislados
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica la paradoja del punto aislado: ¿por qué una función es formalmente continua en cualquier punto aislado de su dominio de acuerdo con la definición $\varepsilon-\delta$, y por qué esto contradice nuestra intuición visual de la continuidad?"
+/>

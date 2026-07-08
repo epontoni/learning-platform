@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Damos el salto hacia la topología formal introduciendo la definición rigurosa de los Conjuntos Abiertos en $\mathbb{R}$. Se define qué es una bola abierta o entorno, y el concepto de punto interior.
 
-**Resumen:** Damos el salto hacia la topología formal introduciendo la definición rigurosa de los Conjuntos Abiertos en $\mathbb{R}$. Se define qué es una bola abierta o entorno, y el concepto de punto interior.\n
+---
+
+## Cuestionario de Puntos Interiores
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="¿Cuál es la condición para que un punto x se denomine 'punto interior' de un conjunto D ⊆ R^n?"
+  options={[
+    "Debe existir una bola abierta centrada en x de radio ε > 0 que esté completamente contenida en D.",
+    "El punto x debe ser el límite de una sucesión de elementos que no pertenecen al conjunto D.",
+    "Cualquier entorno centrado en x debe contener puntos de D y puntos fuera de D al mismo tiempo.",
+    "El punto x debe estar localizado exactamente en el centro geométrico del conjunto."
+  ]}
+  correctIndex={0}
+  explanation="Un punto es interior si podemos movernos en cualquier dirección una distancia lo suficientemente pequeña ε sin salirnos del conjunto D. Esto se formaliza como la existencia de una bola abierta B(x, ε) ⊆ D."
+/>
+
+---
+
+## Evaluación de Entornos y Fronteras
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica la diferencia matemática entre un punto interior, un punto frontera y un punto de acumulación para un conjunto cualquiera $D \subseteq \mathbb{R}$. Proporciona un ejemplo donde un punto sea de acumulación pero no sea interior."
+/>

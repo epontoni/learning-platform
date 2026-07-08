@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Paso a paso de la demostración formal del Teorema de Weierstrass. Primero, se demuestra que la función debe estar acotada, utilizando reducción al absurdo y la convergencia de sucesiones.
 
-**Resumen:** Paso a paso de la demostración formal del Teorema de Weierstrass. Primero, se demuestra que la función debe estar acotada, utilizando reducción al absurdo y la convergencia de sucesiones.\n
+---
+
+## Cuestionario de Acotación y Absurdo
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="En la demostración de la acotación de una función continua en un compacto por reducción al absurdo, ¿qué contradicción se deduce al asumir que la función no está acotada?"
+  options={[
+    "Se construye una sucesión (x_n) cuyas imágenes tienden a infinito, y por Bolzano-Weierstrass se extrae una subsucesión convergente a un punto L. Por continuidad, su imagen debe ser finita f(L), contradiciendo que sus términos tiendan a infinito.",
+    "Se prueba que la función tiene que ser discontinua en todos los puntos de acumulación del intervalo.",
+    "Se deduce que el intervalo inicial [a,b] tiene una longitud infinitamente grande.",
+    "Se demuestra que la función resultante debe tener una derivada no acotada en el origen."
+  ]}
+  correctIndex={0}
+  explanation="Si asumimos que f no está acotada en [a,b], existe para cada n ∈ N un x_n ∈ [a,b] tal que |f(x_n)| > n. Dado que (x_n) está acotada, por Bolzano-Weierstrass existe una subsucesión (x_n_k) que converge a L ∈ [a,b]. Por continuidad de f, lim f(x_n_k) = f(L), lo cual es un valor finito, contradiciendo el hecho de que |f(x_n_k)| > n_k -> ∞."
+/>
+
+---
+
+## Evaluación de la Demostración de Acotación
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Reconstruye la demostración formal por contradicción de la acotación de una función continua $f:[a,b] \to \mathbb{R}$, explicando la importancia de que el límite $L$ pertenezca al dominio $[a,b]$ gracias al carácter cerrado del intervalo."
+/>

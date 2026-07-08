@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Finalmente, se generaliza el Teorema de Bolzano hacia su consecuencia más importante: la propiedad del Valor Intermedio o propiedad de Darboux, donde una función continua alcanza todos los valores intermedios entre $f(a)$ y $f(b)$.
 
-**Resumen:** Finalmente, se generaliza el Teorema de Bolzano hacia su consecuencia más importante: la propiedad del Valor Intermedio o propiedad de Darboux, donde una función continua alcanza todos los valores intermedios entre $f(a)$ y $f(b)$.\n
+---
+
+## Cuestionario del Valor Intermedio
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="¿Qué establece la Propiedad del Valor Intermedio (o propiedad de Darboux) deducida a partir del Teorema de Bolzano?"
+  options={[
+    "Si una función f es continua en [a,b], entonces toma todos los valores comprendidos entre f(a) y f(b) al menos una vez.",
+    "La derivada de una función siempre alcanza su valor máximo en el centro del intervalo.",
+    "Toda función acotada debe ser constante en la mitad de su dominio.",
+    "El promedio aritmético de las imágenes en los extremos siempre coincide con el valor de la función en el punto medio."
+  ]}
+  correctIndex={0}
+  explanation="Si una función es continua en [a,b], para cualquier constante k estrictamente entre f(a) y f(b), podemos definir una función auxiliar g(x) = f(x) - k. Al aplicar el teorema de Bolzano a g, se demuestra que existe un c ∈ (a,b) tal que f(c) = k."
+/>
+
+---
+
+## Evaluación de Existencia de Soluciones
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica la equivalencia lógica entre el Teorema de Bolzano y el Teorema del Valor Intermedio. Muestra cómo a partir del teorema de Bolzano se puede demostrar rigurosamente la existencia de una solución para la ecuación $f(c) = k$."
+/>

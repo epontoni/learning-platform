@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Analizamos la condición de que el intervalo sea cerrado. Usando intervalos abiertos como $(0, 1)$, construimos funciones continuas que no alcanzan sus extremos, demostrando por qué la frontera del dominio es crítica.
 
-**Resumen:** Analizamos la condición de que el intervalo sea cerrado. Usando intervalos abiertos como $(0, 1)$, construimos funciones continuas que no alcanzan sus extremos, demostrando por qué la frontera del dominio es crítica.\n
+---
+
+## Cuestionario de Weierstrass en Dominios Abiertos
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Si una función f es continua en el intervalo abierto (0, 1), ¿cuál es la razón por la que no se garantiza la existencia de un máximo o mínimo absolutos?"
+  options={[
+    "Porque al faltar los puntos de la frontera, la función puede tender asintóticamente a sus extremos sin llegar a alcanzarlos nunca dentro del dominio abierto.",
+    "Porque las funciones continuas en intervalos abiertos son siempre constantes.",
+    "Porque el Teorema de Bolzano-Weierstrass para sucesiones solo es aplicable en intervalos de longitud mayor a uno.",
+    "Porque la derivada en intervalos abiertos siempre es nula."
+  ]}
+  correctIndex={0}
+  explanation="Para la función f(x) = x en el intervalo abierto (0,1), el supremo de la imagen es 1 y el ínfimo es 0. Sin embargo, no existe ningún x ∈ (0,1) tal que f(x) = 1 o f(x) = 0. Por lo tanto, no se alcanzan el máximo ni el mínimo."
+/>
+
+---
+
+## Evaluación del Fallo por Fronteras Abiertas
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Construye y analiza una función continua definida en $(0,1)$ que tienda a infinito al aproximarse a uno de sus extremos y que al aproximarse al otro extremo tienda a un valor real que nunca llega a tocar. Explica detalladamente cómo este comportamiento rompe el teorema de Weierstrass."
+/>

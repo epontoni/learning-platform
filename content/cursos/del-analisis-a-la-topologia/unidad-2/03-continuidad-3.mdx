@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Se establecen las propiedades locales y globales de las funciones continuas. Analizamos cómo se comporta la continuidad ante las operaciones algebraicas (suma, producto, cociente) y la composición de funciones continuas, cimentando el camino para los grandes teoremas del análisis.
 
-**Resumen:** Se establecen las propiedades locales y globales de las funciones continuas. Analizamos cómo se comporta la continuidad ante las operaciones algebraicas (suma, producto, cociente) y la composición de funciones continuas, cimentando el camino para los grandes teoremas del análisis.\n
+---
+
+## Cuestionario de Álgebra de Continuidad
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Sean f, g: D -> R dos funciones continuas en un punto a. ¿Cuál de las siguientes operaciones sobre estas funciones NO garantiza la continuidad en a de forma incondicional?"
+  options={[
+    "El cociente f(x) / g(x).",
+    "La suma f(x) + g(x).",
+    "El producto f(x) * g(x).",
+    "La multiplicación por una constante λ * f(x)."
+  ]}
+  correctIndex={0}
+  explanation="El cociente de dos funciones continuas es continuo únicamente si el denominador en el punto límite no se anula (es decir, g(a) != 0). De lo contrario, la función resultante no está definida en a."
+/>
+
+---
+
+## Evaluación de Composición
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Describe formalmente cómo se demuestra la continuidad de la composición de dos funciones continuas $g \circ f$ en un punto $a$, detallando cómo se encadenan los entornos $\delta$ y $\varepsilon$ correspondientes."
+/>

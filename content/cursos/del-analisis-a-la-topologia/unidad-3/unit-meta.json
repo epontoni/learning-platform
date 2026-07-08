@@ -6,22 +6,50 @@
     {
       "id": "01-bolzano-1",
       "title": "3.1 El teorema de Bolzano (1° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "02-bolzano-2",
       "title": "3.2 El teorema de Bolzano (2° parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "03-bolzano-3",
       "title": "3.3 El teorema de Bolzano (3° parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "04-bolzano-4",
       "title": "3.4 El teorema de Bolzano (4° parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     }
   ]
 }

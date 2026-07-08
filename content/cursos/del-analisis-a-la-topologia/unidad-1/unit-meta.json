@@ -6,7 +6,14 @@
     {
       "id": "01-capitulo-1",
       "title": "1.1 Capítulo 1",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     }
   ]
 }

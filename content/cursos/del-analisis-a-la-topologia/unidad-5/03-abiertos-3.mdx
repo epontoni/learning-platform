@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Vínculo crucial: se reformula la continuidad utilizando exclusivamente conjuntos abiertos. Una función es continua si y solo si la preimagen de todo conjunto abierto es un conjunto abierto. Esto elimina la necesidad de usar distancias ($\varepsilon-\delta$).
 
-**Resumen:** Vínculo crucial: se reformula la continuidad utilizando exclusivamente conjuntos abiertos. Una función es continua si y solo si la preimagen de todo conjunto abierto es un conjunto abierto. Esto elimina la necesidad de usar distancias ($\varepsilon-\delta$).\n
+---
+
+## Cuestionario de Continuidad Topológica
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="¿Cuál es la caracterización puramente topológica de la continuidad de una función f: X -> Y entre dos espacios topológicos?"
+  options={[
+    "La preimagen f^-1(V) de cualquier conjunto abierto V ⊆ Y es un conjunto abierto en X.",
+    "La imagen directa f(U) de cualquier conjunto abierto U ⊆ X es un conjunto abierto en Y.",
+    "La preimagen de cualquier conjunto cerrado es siempre un conjunto abierto.",
+    "La función debe transformar puntos de acumulación del dominio en puntos aislados del codominio."
+  ]}
+  correctIndex={0}
+  explanation="Una función es continua si y solo si la preimagen de todo abierto en el codominio es abierta en el dominio. Esto permite definir la continuidad de manera global sin necesidad de apelar a métricas o distancias ε-δ."
+/>
+
+---
+
+## Evaluación de Preimágenes de Abiertos
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica la equivalencia entre la definición $\varepsilon-\delta$ de continuidad y la caracterización por preimágenes de conjuntos abiertos. ¿Cómo se traduce el radio $\varepsilon$ y el radio $\delta$ al lenguaje de entornos y abiertos?"
+/>

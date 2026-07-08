@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Se concluye la prueba del Teorema de Weierstrass construyendo sucesiones que convergen específicamente a los valores supremos e ínfimos, garantizando que el máximo y el mínimo no solo existen, sino que son alcanzados.
 
-**Resumen:** Se concluye la prueba del Teorema de Weierstrass construyendo sucesiones que convergen específicamente a los valores supremos e ínfimos, garantizando que el máximo y el mínimo no solo existen, sino que son alcanzados.\n
+---
+
+## Cuestionario de Alcance del Supremo
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="Una vez demostrado que f(D) está acotada y que por ende posee supremo S, ¿cómo se demuestra que S pertenece a la imagen f(D)?"
+  options={[
+    "Se construye una sucesión de imágenes que se aproximan a S, y por la compacidad del dominio, la sucesión de preimágenes tiene una subsucesión convergente a c ∈ D, cuya imagen es f(c) = S.",
+    "Se asume que S es una constante infinitamente pequeña que coincide con el origen.",
+    "Se integra la función sobre el dominio y se aplica el teorema fundamental del cálculo.",
+    "Se utiliza la propiedad de que toda función continua es derivable en su supremo."
+  ]}
+  correctIndex={0}
+  explanation="Al ser S el supremo, para cada n existe un x_n ∈ D tal que S - 1/n < f(x_n) <= S. La sucesión (x_n) está contenida en el compacto D, por lo que posee una subsucesión (x_n_k) que converge a un punto c ∈ D. Debido a la continuidad de f, f(c) = lim f(x_n_k) = S, demostrando que el supremo es efectivamente alcanzado en el punto c."
+/>
+
+---
+
+## Evaluación de la Prueba de Extremos
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica detalladamente cómo se demuestra que una función continua en un compacto alcanza su supremo $S$. Destaca el papel del teorema de encaje/límite y la continuidad en la justificación de que $f(c) = S$."
+/>

@@ -6,17 +6,38 @@
     {
       "id": "01-continuidad-1",
       "title": "2.1 Continuidad (1° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "02-continuidad-2",
       "title": "2.2 Continuidad (2° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     },
     {
       "id": "03-continuidad-3",
       "title": "2.3 Continuidad (3° Parte)",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Apunte del curso",
+          "type": "pdf",
+          "url": "/resources/del-analisis-a-la-topologia.pdf"
+        }
+      ]
     }
   ]
 }

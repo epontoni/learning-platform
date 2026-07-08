@@ -7,11 +7,38 @@ A continuación, visualiza la lección en video:
     width="100%" 
     height="100%" 
     src="https://www.youtube.com/embed/_vSgg5TWaXw" 
-    title="5.2 Conjuntos Abiertos - 2° Parte" 
+    title="5.2 Conjuntos Abiertos (2° Parte)" 
     frameBorder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Se analizan las propiedades axiomáticas de los conjuntos abiertos: la unión arbitraria de abiertos es abierta, y la intersección finita de abiertos es abierta. Se proveen ejemplos visuales y contraejemplos para la intersección infinita.
 
-**Resumen:** Se analizan las propiedades axiomáticas de los conjuntos abiertos: la unión arbitraria de abiertos es abierta, y la intersección finita de abiertos es abierta. Se proveen ejemplos visuales y contraejemplos para la intersección infinita.\n
+---
+
+## Cuestionario de Álgebra de Abiertos
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="¿Cuál de las siguientes afirmaciones sobre las propiedades de los conjuntos abiertos es FALSA en general?"
+  options={[
+    "La intersección de cualquier familia infinita de conjuntos abiertos es siempre un conjunto abierto.",
+    "La unión de cualquier familia arbitraria (finita o infinita) de conjuntos abiertos es abierta.",
+    "La intersección de una familia finita de conjuntos abiertos es un conjunto abierto.",
+    "El conjunto vacío ∅ y el espacio completo R^n son abiertos por definición."
+  ]}
+  correctIndex={0}
+  explanation="La intersección de infinitos conjuntos abiertos no tiene por qué ser abierta. Un contraejemplo clásico es la intersección infinita de los intervalos abiertos D_n = (-1/n, 1/n) para n ∈ N, cuyo resultado es {0}, el cual es un conjunto cerrado y no abierto en R."
+/>
+
+---
+
+## Evaluación de Intersecciones Infinitas
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Demuestra matemáticamente que la unión arbitraria de conjuntos abiertos es un conjunto abierto. Luego, explica a través del contraejemplo de los intervalos $(-1/n, 1/n)$ por qué falla esta propiedad al intersectar infinitos abiertos."
+/>

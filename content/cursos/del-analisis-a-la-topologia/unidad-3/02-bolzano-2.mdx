@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Nos enfocamos en la demostración del Teorema de Bolzano utilizando el Método de Bisección (o partición dicotómica). Observamos cómo la construcción de intervalos anidados nos lleva de manera rigurosa a capturar el punto donde la función se anula.
 
-**Resumen:** Nos enfocamos en la demostración del Teorema de Bolzano utilizando el Método de Bisección (o partición dicotómica). Observamos cómo la construcción de intervalos anidados nos lleva de manera rigurosa a capturar el punto donde la función se anula.\n
+---
+
+## Cuestionario del Método de Bisección
+
+Verifica tu comprensión del tema respondiendo la siguiente pregunta:
+
+<QuizMultipleChoice 
+  question="En la demostración de Bolzano mediante el Método de Bisección, ¿qué propiedad de la recta real garantiza que la intersección de la sucesión de intervalos anidados [a_n, b_n] contiene un único número real?"
+  options={[
+    "El principio de encaje de intervalos cerrados (o teorema de intervalos anidados) junto con el hecho de que la longitud del intervalo tiende a cero.",
+    "La propiedad arquimediana de los números racionales.",
+    "La densidad de los números irracionales en R.",
+    "El hecho de que toda función continua alcanza su supremo en intervalos cerrados."
+  ]}
+  correctIndex={0}
+  explanation="El teorema de intervalos anidados establece que una sucesión decreciente de intervalos cerrados cuya longitud tiende a cero converge a un único punto real en común."
+/>
+
+---
+
+## Evaluación de Intervalos Anidados
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Explica detalladamente cómo funciona el método de bisección en la demostración de Bolzano. ¿Cómo se construyen las sucesiones de los extremos $(a_n)$ y $(b_n)$, y cómo demostramos que el valor límite $c = \lim a_n = \lim b_n$ satisface $f(c) = 0$?"
+/>

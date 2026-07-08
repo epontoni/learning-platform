@@ -13,5 +13,32 @@ A continuación, visualiza la lección en video:
     allowFullScreen
   ></iframe>
 </div>
+**Resumen:** Abordamos la definición clásica de continuidad en un punto usando épsilon-delta ($\varepsilon-\delta$). Analizamos su interpretación geométrica: dado un margen de error en las imágenes, cómo podemos asegurar un margen en el dominio. Se discuten los primeros ejemplos y los 'monstruos' matemáticos que obligan a ser precisos con el dominio.
 
-**Resumen:** Abordamos la definición clásica de continuidad en un punto usando épsilon-delta ($\varepsilon-\delta$). Analizamos su interpretación geométrica: dado un margen de error en las imágenes, cómo podemos asegurar un margen en el dominio. Se discuten los primeros ejemplos y los 'monstruos' matemáticos que obligan a ser precisos con el dominio.\n
+---
+
+## Cuestionario de Continuidad Épsilon-Delta
+
+Verifica tu asimilación de la definición formal resolviendo la siguiente pregunta interactiva:
+
+<QuizMultipleChoice 
+  question="En la definición clásica ε-δ de continuidad en un punto a, ¿cuál es la relación lógica de dependencia entre ε y δ?"
+  options={[
+    "Para cada margen de error ε > 0 dado en el codominio, debe existir un radio δ > 0 en el dominio tal que si la distancia de x a a es menor a δ, la distancia de sus imágenes es menor a ε.",
+    "Elegimos primero un δ > 0 arbitrario y luego demostramos que existe un único ε > 0 dependiente de él.",
+    "El valor de δ es fijo e igual a ε para cualquier tipo de función continua.",
+    "La existencia de ε depende exclusivamente de la diferenciabilidad de la función en dicho punto."
+  ]}
+  correctIndex={0}
+  explanation="La definición rigurosa requiere que dado cualquier entorno de radio ε alrededor de f(a) (codominio), podamos asegurar el control de las imágenes seleccionando un radio de proximidad δ adecuado alrededor de a (dominio)."
+/>
+
+---
+
+## Evaluación de Interpretación Geométrica
+
+Responde a la siguiente consigna para profundizar en el tema:
+
+<SemanticEval 
+  prompt="Describe geométricamente y de manera intuitiva el significado de la definición $\varepsilon-\delta$ de continuidad en un punto, y cómo la elección de $\varepsilon$ restringe las dimensiones del dominio mediante el hallazgo de $\delta$."
+/>

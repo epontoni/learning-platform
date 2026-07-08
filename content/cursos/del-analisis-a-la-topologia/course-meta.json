@@ -7,48 +7,102 @@
       "id": "unidad-1",
       "title": "Unidad 1: Introducción",
       "topics": [
-        { "id": "01-capitulo-1", "title": "1.1 Capítulo 1" }
+        {
+          "id": "01-capitulo-1",
+          "title": "1.1 Capítulo 1"
+        }
       ]
     },
     {
       "id": "unidad-2",
       "title": "Unidad 2: Continuidad",
       "topics": [
-        { "id": "01-continuidad-1", "title": "2.1 Continuidad (1° Parte)" },
-        { "id": "02-continuidad-2", "title": "2.2 Continuidad (2° Parte)" },
-        { "id": "03-continuidad-3", "title": "2.3 Continuidad (3° Parte)" }
+        {
+          "id": "01-continuidad-1",
+          "title": "2.1 Continuidad (1° Parte)"
+        },
+        {
+          "id": "02-continuidad-2",
+          "title": "2.2 Continuidad (2° Parte)"
+        },
+        {
+          "id": "03-continuidad-3",
+          "title": "2.3 Continuidad (3° Parte)"
+        }
       ]
     },
     {
       "id": "unidad-3",
       "title": "Unidad 3: El Teorema de Bolzano",
       "topics": [
-        { "id": "01-bolzano-1", "title": "3.1 El teorema de Bolzano (1° Parte)" },
-        { "id": "02-bolzano-2", "title": "3.2 El teorema de Bolzano (2° parte)" },
-        { "id": "03-bolzano-3", "title": "3.3 El teorema de Bolzano (3° parte)" },
-        { "id": "04-bolzano-4", "title": "3.4 El teorema de Bolzano (4° parte)" }
+        {
+          "id": "01-bolzano-1",
+          "title": "3.1 El teorema de Bolzano (1° Parte)"
+        },
+        {
+          "id": "02-bolzano-2",
+          "title": "3.2 El teorema de Bolzano (2° parte)"
+        },
+        {
+          "id": "03-bolzano-3",
+          "title": "3.3 El teorema de Bolzano (3° parte)"
+        },
+        {
+          "id": "04-bolzano-4",
+          "title": "3.4 El teorema de Bolzano (4° parte)"
+        }
       ]
     },
     {
       "id": "unidad-4",
       "title": "Unidad 4: El Teorema de Weierstrass",
       "topics": [
-        { "id": "01-weierstrass-1", "title": "4.1 El teorema de Weierstrass (1° parte)" },
-        { "id": "02-weierstrass-2", "title": "4.2 El teorema de Weierstrass (2° parte)" },
-        { "id": "03-weierstrass-3", "title": "4.3 El teorema de Weierstrass (3° parte)" },
-        { "id": "04-weierstrass-4", "title": "4.4 El teorema de Weierstrass (4° parte)" },
-        { "id": "05-weierstrass-5", "title": "4.5 El teorema de Weierstrass (5° parte)" },
-        { "id": "06-weierstrass-6", "title": "4.6 El Teorema de Weierstrass (6° Parte)" }
+        {
+          "id": "01-weierstrass-1",
+          "title": "4.1 El teorema de Weierstrass (1° parte)"
+        },
+        {
+          "id": "02-weierstrass-2",
+          "title": "4.2 El teorema de Weierstrass (2° parte)"
+        },
+        {
+          "id": "03-weierstrass-3",
+          "title": "4.3 El teorema de Weierstrass (3° parte)"
+        },
+        {
+          "id": "04-weierstrass-4",
+          "title": "4.4 El teorema de Weierstrass (4° parte)"
+        },
+        {
+          "id": "05-weierstrass-5",
+          "title": "4.5 El teorema de Weierstrass (5° parte)"
+        },
+        {
+          "id": "06-weierstrass-6",
+          "title": "4.6 El Teorema de Weierstrass (6° Parte)"
+        }
       ]
     },
     {
       "id": "unidad-5",
       "title": "Unidad 5: Conjuntos Abiertos",
       "topics": [
-        { "id": "01-abiertos-1", "title": "5.1 Conjuntos Abiertos (1° Parte)" },
-        { "id": "02-abiertos-2", "title": "5.2 Conjuntos Abiertos - 2° Parte" },
-        { "id": "03-abiertos-3", "title": "5.3 Conjuntos Abiertos (3° parte)" },
-        { "id": "04-abiertos-4", "title": "5.4 Conjuntos Abiertos (4° Parte)" }
+        {
+          "id": "01-abiertos-1",
+          "title": "5.1 Conjuntos Abiertos (1° Parte)"
+        },
+        {
+          "id": "02-abiertos-2",
+          "title": "5.2 Conjuntos Abiertos (2° Parte)"
+        },
+        {
+          "id": "03-abiertos-3",
+          "title": "5.3 Conjuntos Abiertos (3° parte)"
+        },
+        {
+          "id": "04-abiertos-4",
+          "title": "5.4 Conjuntos Abiertos (4° Parte)"
+        }
       ]
     }
   ]
