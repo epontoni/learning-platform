@@ -11,7 +11,14 @@
     {
       "id": "02-superficies-regulares-imagenes-inversas",
       "title": "2.2 Superficies regulares; Imágenes inversas de valores regulares",
-      "duration": "20 min"
+      "duration": "20 min",
+      "resources": [
+        {
+          "title": "Ejercicio: Proyección Estereográfica (PDF)",
+          "type": "pdf",
+          "url": "/resources/ejercicio-proyeccion-estereografica.pdf"
+        }
+      ]
     },
     {
       "id": "03-cambio-parametros-funciones-diferenciables",

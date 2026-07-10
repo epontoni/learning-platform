@@ -23,3 +23,26 @@ Sea $f: U \subset \mathbb{R}^3 \to \mathbb{R}$ una función diferenciable. Un va
 </div>
 
 Por ejemplo, consideremos la esfera unitaria: $x^2 + y^2 + z^2 = 1$. Si tomamos $f(x,y,z) = x^2 + y^2 + z^2$, entonces $\nabla f = (2x, 2y, 2z)$. Este gradiente solo se anula en el origen $(0,0,0)$, el cual no está en $f^{-1}(1)$. Por tanto, $1$ es un valor regular, lo que demuestra inmediatamente que la esfera es una superficie regular.
+
+## Proyección Estereográfica
+<div className="my-6">
+  <iframe 
+    className="w-full aspect-video rounded-lg border border-slate-200 dark:border-slate-800"
+    src="https://www.youtube.com/embed/ID6Ydn5BGsI" 
+    title="Proyección Estereográfica"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+---
+
+## Actividad: Ejercicio de Proyección Estereográfica
+
+Consideremos la proyección estereográfica $\pi: S^2 \setminus \{N\} \rightarrow \mathbb{R}^2$ de la esfera $S^2$ definida por la ecuación $x^2 + y^2 + (z - 1)^2 = 1$ desde el polo norte $N = (0, 0, 2)$ sobre el plano $xy$.
+
+<SemanticEval 
+  prompt="Parametriza la recta que conecta el polo norte $N = (0, 0, 2)$ con un punto $(u, v, 0)$ del plano $xy$ y demuestra detalladamente que la aplicación inversa $\pi^{-1}: \mathbb{R}^2 \rightarrow S^2$ está dada por:
+
+$$\pi^{-1}(u,v) = \left( \frac{4u}{u^2+v^2+4}, \; \frac{4v}{u^2+v^2+4}, \; \frac{2(u^2+v^2)}{u^2+v^2+4} \right)$$"
+/>
